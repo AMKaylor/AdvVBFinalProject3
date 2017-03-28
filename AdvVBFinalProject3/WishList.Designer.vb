@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class WishList
+Partial Class frmWishList
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -24,12 +24,12 @@ Partial Class WishList
     Private Sub InitializeComponent()
         Me.SuspendLayout()
         '
-        'WishList
+        'frmWishList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(515, 291)
-        Me.Name = "WishList"
+        Me.Name = "frmWishList"
         Me.Text = "Wish List"
         Me.ResumeLayout(False)
 

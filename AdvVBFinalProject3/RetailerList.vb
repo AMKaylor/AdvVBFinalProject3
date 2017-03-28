@@ -1,3 +1,3 @@
-﻿Public Class RetailerList
+﻿Public Class frmRetailerList
 
 End Class

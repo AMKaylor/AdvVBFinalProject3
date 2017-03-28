@@ -1,3 +1,3 @@
-﻿Public Class WishList
+﻿Public Class frmWishList
 
 End Class

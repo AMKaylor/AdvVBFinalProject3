@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class ViewAllProducts
+Partial Class frmViewAllProducts
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -24,12 +24,12 @@ Partial Class ViewAllProducts
     Private Sub InitializeComponent()
         Me.SuspendLayout()
         '
-        'ViewAllProducts
+        'frmViewAllProducts
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(617, 316)
-        Me.Name = "ViewAllProducts"
+        Me.Name = "frmViewAllProducts"
         Me.Text = "View All Products"
         Me.ResumeLayout(False)
 

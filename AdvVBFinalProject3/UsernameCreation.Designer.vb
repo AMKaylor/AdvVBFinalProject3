@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmProductPriceComparison
+Partial Class frmUsernameCreation
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -24,13 +24,13 @@ Partial Class frmProductPriceComparison
     Private Sub InitializeComponent()
         Me.SuspendLayout()
         '
-        'frmProductPriceComparison
+        'frmUsernameCreation
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(669, 327)
-        Me.Name = "frmProductPriceComparison"
-        Me.Text = "Product Price Comparison"
+        Me.ClientSize = New System.Drawing.Size(348, 271)
+        Me.Name = "frmUsernameCreation"
+        Me.Text = "Username Creation"
         Me.ResumeLayout(False)
 
     End Sub

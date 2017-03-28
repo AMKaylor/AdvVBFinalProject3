@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class RetailProductList
+Partial Class frmRetailProductList
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -24,12 +24,12 @@ Partial Class RetailProductList
     Private Sub InitializeComponent()
         Me.SuspendLayout()
         '
-        'RetailProductList
+        'frmRetailProductList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(660, 358)
-        Me.Name = "RetailProductList"
+        Me.Name = "frmRetailProductList"
         Me.Text = "Retail Product List"
         Me.ResumeLayout(False)
 

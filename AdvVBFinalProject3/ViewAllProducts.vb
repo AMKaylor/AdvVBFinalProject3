@@ -1,3 +1,3 @@
-﻿Public Class ViewAllProducts
+﻿Public Class frmViewAllProducts
 
 End Class

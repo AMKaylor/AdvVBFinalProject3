@@ -112,6 +112,12 @@
     <Compile Include="RetailProductList.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UsernameCreation.Designer.vb">
+      <DependentUpon>UsernameCreation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UsernameCreation.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ViewAllProducts.Designer.vb">
       <DependentUpon>ViewAllProducts.vb</DependentUpon>
     </Compile>
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RetailProductList.resx">
       <DependentUpon>RetailProductList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsernameCreation.resx">
+      <DependentUpon>UsernameCreation.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewAllProducts.resx">
       <DependentUpon>ViewAllProducts.vb</DependentUpon>

@@ -1,3 +1,3 @@
-﻿Public Class ProductPriceComparison
+﻿Public Class frmProductPriceComparison
 
 End Class
