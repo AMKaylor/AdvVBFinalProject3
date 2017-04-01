@@ -25,17 +25,18 @@ Partial Class CALSmain
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RetailerInformationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AccountInfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.StatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.YourWishListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CreateNewUserToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RetailerInformationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RetailerProductListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProductInfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.YourWishListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewAllToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.PriceComparisonToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CreateNewUserToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.StatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.lblStatus = New System.Windows.Forms.ToolStripStatusLabel()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -59,15 +60,8 @@ Partial Class CALSmain
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(92, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
-        '
-        'RetailerInformationToolStripMenuItem
-        '
-        Me.RetailerInformationToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewAllToolStripMenuItem, Me.RetailerProductListToolStripMenuItem})
-        Me.RetailerInformationToolStripMenuItem.Name = "RetailerInformationToolStripMenuItem"
-        Me.RetailerInformationToolStripMenuItem.Size = New System.Drawing.Size(82, 20)
-        Me.RetailerInformationToolStripMenuItem.Text = "Retailer Info"
         '
         'AccountInfoToolStripMenuItem
         '
@@ -76,19 +70,24 @@ Partial Class CALSmain
         Me.AccountInfoToolStripMenuItem.Size = New System.Drawing.Size(88, 20)
         Me.AccountInfoToolStripMenuItem.Text = "Account Info"
         '
-        'StatusStrip1
+        'YourWishListToolStripMenuItem
         '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StatusLabel})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 415)
-        Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(765, 22)
-        Me.StatusStrip1.TabIndex = 1
-        Me.StatusStrip1.Text = "StatusStrip1"
+        Me.YourWishListToolStripMenuItem.Name = "YourWishListToolStripMenuItem"
+        Me.YourWishListToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
+        Me.YourWishListToolStripMenuItem.Text = "Your Wish List"
         '
-        'StatusLabel
+        'CreateNewUserToolStripMenuItem
         '
-        Me.StatusLabel.Name = "StatusLabel"
-        Me.StatusLabel.Size = New System.Drawing.Size(0, 17)
+        Me.CreateNewUserToolStripMenuItem.Name = "CreateNewUserToolStripMenuItem"
+        Me.CreateNewUserToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
+        Me.CreateNewUserToolStripMenuItem.Text = "Create New User"
+        '
+        'RetailerInformationToolStripMenuItem
+        '
+        Me.RetailerInformationToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewAllToolStripMenuItem, Me.RetailerProductListToolStripMenuItem})
+        Me.RetailerInformationToolStripMenuItem.Name = "RetailerInformationToolStripMenuItem"
+        Me.RetailerInformationToolStripMenuItem.Size = New System.Drawing.Size(82, 20)
+        Me.RetailerInformationToolStripMenuItem.Text = "Retailer Info"
         '
         'ViewAllToolStripMenuItem
         '
@@ -109,12 +108,6 @@ Partial Class CALSmain
         Me.ProductInfoToolStripMenuItem.Size = New System.Drawing.Size(85, 20)
         Me.ProductInfoToolStripMenuItem.Text = "Product Info"
         '
-        'YourWishListToolStripMenuItem
-        '
-        Me.YourWishListToolStripMenuItem.Name = "YourWishListToolStripMenuItem"
-        Me.YourWishListToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
-        Me.YourWishListToolStripMenuItem.Text = "Your Wish List"
-        '
         'ViewAllToolStripMenuItem1
         '
         Me.ViewAllToolStripMenuItem1.Name = "ViewAllToolStripMenuItem1"
@@ -127,11 +120,24 @@ Partial Class CALSmain
         Me.PriceComparisonToolStripMenuItem.Size = New System.Drawing.Size(168, 22)
         Me.PriceComparisonToolStripMenuItem.Text = "Price Comparison"
         '
-        'CreateNewUserToolStripMenuItem
+        'StatusStrip1
         '
-        Me.CreateNewUserToolStripMenuItem.Name = "CreateNewUserToolStripMenuItem"
-        Me.CreateNewUserToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
-        Me.CreateNewUserToolStripMenuItem.Text = "Create New User"
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StatusLabel, Me.lblStatus})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 415)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(765, 22)
+        Me.StatusStrip1.TabIndex = 1
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'StatusLabel
+        '
+        Me.StatusLabel.Name = "StatusLabel"
+        Me.StatusLabel.Size = New System.Drawing.Size(0, 17)
+        '
+        'lblStatus
+        '
+        Me.lblStatus.Name = "lblStatus"
+        Me.lblStatus.Size = New System.Drawing.Size(0, 17)
         '
         'CALSmain
         '
@@ -166,4 +172,5 @@ Partial Class CALSmain
     Friend WithEvents ViewAllToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents PriceComparisonToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CreateNewUserToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents lblStatus As ToolStripStatusLabel
 End Class
