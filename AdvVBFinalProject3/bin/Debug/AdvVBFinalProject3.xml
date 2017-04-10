@@ -22,5 +22,130 @@ AdvVBFinalProject3
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="T:AdvVBFinalProject3.CALSdatabaseDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:AdvVBFinalProject3.CALSdatabaseDataSet.MembertableDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdvVBFinalProject3.CALSdatabaseDataSet.ProductTableDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdvVBFinalProject3.CALSdatabaseDataSet.RetailerTableDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdvVBFinalProject3.CALSdatabaseDataSet.WishlistTableDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AdvVBFinalProject3.CALSdatabaseDataSet.MembertableRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdvVBFinalProject3.CALSdatabaseDataSet.ProductTableRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdvVBFinalProject3.CALSdatabaseDataSet.RetailerTableRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdvVBFinalProject3.CALSdatabaseDataSet.WishlistTableRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdvVBFinalProject3.CALSdatabaseDataSet.MembertableRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdvVBFinalProject3.CALSdatabaseDataSet.ProductTableRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdvVBFinalProject3.CALSdatabaseDataSet.RetailerTableRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdvVBFinalProject3.CALSdatabaseDataSet.WishlistTableRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AdvVBFinalProject3.CALSdatabaseDataSetTableAdapters.MembertableTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdvVBFinalProject3.CALSdatabaseDataSetTableAdapters.ProductTableTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdvVBFinalProject3.CALSdatabaseDataSetTableAdapters.RetailerTableTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdvVBFinalProject3.CALSdatabaseDataSetTableAdapters.WishlistTableTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdvVBFinalProject3.CALSdatabaseDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:AdvVBFinalProject3.CALSdatabaseDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(AdvVBFinalProject3.CALSdatabaseDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:AdvVBFinalProject3.CALSdatabaseDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(AdvVBFinalProject3.CALSdatabaseDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:AdvVBFinalProject3.CALSdatabaseDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(AdvVBFinalProject3.CALSdatabaseDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:AdvVBFinalProject3.CALSdatabaseDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:AdvVBFinalProject3.CALSdatabaseDataSetTableAdapters.TableAdapterManager.UpdateAll(AdvVBFinalProject3.CALSdatabaseDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:AdvVBFinalProject3.CALSdatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:AdvVBFinalProject3.CALSdatabaseDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
 </members>
 </doc>

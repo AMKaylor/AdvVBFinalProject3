@@ -33,6 +33,14 @@ Partial Public Class CALSdatabaseDataSet
     
     Private tableWishlistTable As WishlistTableDataTable
     
+    Private relationMembertable_WishlistTable As Global.System.Data.DataRelation
+    
+    Private relationProductTable_WishlistTable As Global.System.Data.DataRelation
+    
+    Private relationRetailerTable_ProductTable As Global.System.Data.DataRelation
+    
+    Private relationRetailerTable_WishlistTable As Global.System.Data.DataRelation
+    
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -266,6 +274,10 @@ Partial Public Class CALSdatabaseDataSet
                 Me.tableWishlistTable.InitVars
             End If
         End If
+        Me.relationMembertable_WishlistTable = Me.Relations("Membertable_WishlistTable")
+        Me.relationProductTable_WishlistTable = Me.Relations("ProductTable_WishlistTable")
+        Me.relationRetailerTable_ProductTable = Me.Relations("RetailerTable_ProductTable")
+        Me.relationRetailerTable_WishlistTable = Me.Relations("RetailerTable_WishlistTable")
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -284,6 +296,14 @@ Partial Public Class CALSdatabaseDataSet
         MyBase.Tables.Add(Me.tableRetailerTable)
         Me.tableWishlistTable = New WishlistTableDataTable()
         MyBase.Tables.Add(Me.tableWishlistTable)
+        Me.relationMembertable_WishlistTable = New Global.System.Data.DataRelation("Membertable_WishlistTable", New Global.System.Data.DataColumn() {Me.tableMembertable.MemberIdColumn}, New Global.System.Data.DataColumn() {Me.tableWishlistTable.MemberIdColumn}, false)
+        Me.Relations.Add(Me.relationMembertable_WishlistTable)
+        Me.relationProductTable_WishlistTable = New Global.System.Data.DataRelation("ProductTable_WishlistTable", New Global.System.Data.DataColumn() {Me.tableProductTable.ProductIdColumn}, New Global.System.Data.DataColumn() {Me.tableWishlistTable.ProductIdColumn}, false)
+        Me.Relations.Add(Me.relationProductTable_WishlistTable)
+        Me.relationRetailerTable_ProductTable = New Global.System.Data.DataRelation("RetailerTable_ProductTable", New Global.System.Data.DataColumn() {Me.tableRetailerTable.RetailerIdColumn}, New Global.System.Data.DataColumn() {Me.tableProductTable.RetailerIdColumn}, false)
+        Me.Relations.Add(Me.relationRetailerTable_ProductTable)
+        Me.relationRetailerTable_WishlistTable = New Global.System.Data.DataRelation("RetailerTable_WishlistTable", New Global.System.Data.DataColumn() {Me.tableRetailerTable.RetailerIdColumn}, New Global.System.Data.DataColumn() {Me.tableWishlistTable.RetailerIdColumn}, false)
+        Me.Relations.Add(Me.relationRetailerTable_WishlistTable)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -817,9 +837,12 @@ Partial Public Class CALSdatabaseDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddProductTableRow(ByVal ProductId As Integer, ByVal Product_Name As String, ByVal Marine_Type As String, ByVal Experience As String, ByVal Season As String, ByVal Food_Diet As String, ByVal RetailerId As Integer, ByVal Retailer_Name As String) As ProductTableRow
+        Public Overloads Function AddProductTableRow(ByVal ProductId As Integer, ByVal Product_Name As String, ByVal Marine_Type As String, ByVal Experience As String, ByVal Season As String, ByVal Food_Diet As String, ByVal parentRetailerTableRowByRetailerTable_ProductTable As RetailerTableRow, ByVal Retailer_Name As String) As ProductTableRow
             Dim rowProductTableRow As ProductTableRow = CType(Me.NewRow,ProductTableRow)
-            Dim columnValuesArray() As Object = New Object() {ProductId, Product_Name, Marine_Type, Experience, Season, Food_Diet, RetailerId, Retailer_Name}
+            Dim columnValuesArray() As Object = New Object() {ProductId, Product_Name, Marine_Type, Experience, Season, Food_Diet, Nothing, Retailer_Name}
+            If (Not (parentRetailerTableRowByRetailerTable_ProductTable) Is Nothing) Then
+                columnValuesArray(6) = parentRetailerTableRowByRetailerTable_ProductTable(0)
+            End If
             rowProductTableRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowProductTableRow)
             Return rowProductTableRow
@@ -1461,9 +1484,18 @@ Partial Public Class CALSdatabaseDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddWishlistTableRow(ByVal MemberId As String, ByVal ProductId As Integer, ByVal Product_Name As String, ByVal Marine_Type As String, ByVal Experience As String, ByVal Season As String, ByVal Food_Diet As String, ByVal RetailerId As Integer, ByVal Retailer_Name As String) As WishlistTableRow
+        Public Overloads Function AddWishlistTableRow(ByVal parentMembertableRowByMembertable_WishlistTable As MembertableRow, ByVal parentProductTableRowByProductTable_WishlistTable As ProductTableRow, ByVal Product_Name As String, ByVal Marine_Type As String, ByVal Experience As String, ByVal Season As String, ByVal Food_Diet As String, ByVal parentRetailerTableRowByRetailerTable_WishlistTable As RetailerTableRow, ByVal Retailer_Name As String) As WishlistTableRow
             Dim rowWishlistTableRow As WishlistTableRow = CType(Me.NewRow,WishlistTableRow)
-            Dim columnValuesArray() As Object = New Object() {MemberId, ProductId, Product_Name, Marine_Type, Experience, Season, Food_Diet, RetailerId, Retailer_Name}
+            Dim columnValuesArray() As Object = New Object() {Nothing, Nothing, Product_Name, Marine_Type, Experience, Season, Food_Diet, Nothing, Retailer_Name}
+            If (Not (parentMembertableRowByMembertable_WishlistTable) Is Nothing) Then
+                columnValuesArray(0) = parentMembertableRowByMembertable_WishlistTable(0)
+            End If
+            If (Not (parentProductTableRowByProductTable_WishlistTable) Is Nothing) Then
+                columnValuesArray(1) = parentProductTableRowByProductTable_WishlistTable(0)
+            End If
+            If (Not (parentRetailerTableRowByRetailerTable_WishlistTable) Is Nothing) Then
+                columnValuesArray(7) = parentRetailerTableRowByRetailerTable_WishlistTable(0)
+            End If
             rowWishlistTableRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowWishlistTableRow)
             Return rowWishlistTableRow
@@ -1701,6 +1733,16 @@ Partial Public Class CALSdatabaseDataSet
                 Me(Me.tableMembertable.PasswordColumn) = value
             End Set
         End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function GetWishlistTableRows() As WishlistTableRow()
+            If (Me.Table.ChildRelations("Membertable_WishlistTable") Is Nothing) Then
+                Return New WishlistTableRow(-1) {}
+            Else
+                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("Membertable_WishlistTable")),WishlistTableRow())
+            End If
+        End Function
     End Class
     
     '''<summary>
@@ -1832,6 +1874,17 @@ Partial Public Class CALSdatabaseDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property RetailerTableRow() As RetailerTableRow
+            Get
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("RetailerTable_ProductTable")),RetailerTableRow)
+            End Get
+            Set
+                Me.SetParentRow(value, Me.Table.ParentRelations("RetailerTable_ProductTable"))
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsProduct_NameNull() As Boolean
             Return Me.IsNull(Me.tableProductTable.Product_NameColumn)
         End Function
@@ -1901,6 +1954,16 @@ Partial Public Class CALSdatabaseDataSet
         Public Sub SetRetailer_NameNull()
             Me(Me.tableProductTable.Retailer_NameColumn) = Global.System.Convert.DBNull
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function GetWishlistTableRows() As WishlistTableRow()
+            If (Me.Table.ChildRelations("ProductTable_WishlistTable") Is Nothing) Then
+                Return New WishlistTableRow(-1) {}
+            Else
+                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("ProductTable_WishlistTable")),WishlistTableRow())
+            End If
+        End Function
     End Class
     
     '''<summary>
@@ -1955,6 +2018,26 @@ Partial Public Class CALSdatabaseDataSet
         Public Sub SetRetailer_NameNull()
             Me(Me.tableRetailerTable.Retailer_NameColumn) = Global.System.Convert.DBNull
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function GetProductTableRows() As ProductTableRow()
+            If (Me.Table.ChildRelations("RetailerTable_ProductTable") Is Nothing) Then
+                Return New ProductTableRow(-1) {}
+            Else
+                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("RetailerTable_ProductTable")),ProductTableRow())
+            End If
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function GetWishlistTableRows() As WishlistTableRow()
+            If (Me.Table.ChildRelations("RetailerTable_WishlistTable") Is Nothing) Then
+                Return New WishlistTableRow(-1) {}
+            Else
+                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("RetailerTable_WishlistTable")),WishlistTableRow())
+            End If
+        End Function
     End Class
     
     '''<summary>
@@ -2092,6 +2175,39 @@ Partial Public Class CALSdatabaseDataSet
             End Get
             Set
                 Me(Me.tableWishlistTable.Retailer_NameColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property MembertableRow() As MembertableRow
+            Get
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("Membertable_WishlistTable")),MembertableRow)
+            End Get
+            Set
+                Me.SetParentRow(value, Me.Table.ParentRelations("Membertable_WishlistTable"))
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property ProductTableRow() As ProductTableRow
+            Get
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("ProductTable_WishlistTable")),ProductTableRow)
+            End Get
+            Set
+                Me.SetParentRow(value, Me.Table.ParentRelations("ProductTable_WishlistTable"))
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property RetailerTableRow() As RetailerTableRow
+            Get
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("RetailerTable_WishlistTable")),RetailerTableRow)
+            End Get
+            Set
+                Me.SetParentRow(value, Me.Table.ParentRelations("RetailerTable_WishlistTable"))
             End Set
         End Property
         
@@ -4240,6 +4356,15 @@ Namespace CALSdatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Function UpdateUpdatedRows(ByVal dataSet As CALSdatabaseDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
+            If (Not (Me._retailerTableTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.RetailerTable.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+                updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
+                If ((Not (updatedRows) Is Nothing)  _
+                            AndAlso (0 < updatedRows.Length)) Then
+                    result = (result + Me._retailerTableTableAdapter.Update(updatedRows))
+                    allChangedRows.AddRange(updatedRows)
+                End If
+            End If
             If (Not (Me._membertableTableAdapter) Is Nothing) Then
                 Dim updatedRows() As Global.System.Data.DataRow = dataSet.Membertable.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
                 updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
@@ -4255,15 +4380,6 @@ Namespace CALSdatabaseDataSetTableAdapters
                 If ((Not (updatedRows) Is Nothing)  _
                             AndAlso (0 < updatedRows.Length)) Then
                     result = (result + Me._productTableTableAdapter.Update(updatedRows))
-                    allChangedRows.AddRange(updatedRows)
-                End If
-            End If
-            If (Not (Me._retailerTableTableAdapter) Is Nothing) Then
-                Dim updatedRows() As Global.System.Data.DataRow = dataSet.RetailerTable.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
-                updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
-                If ((Not (updatedRows) Is Nothing)  _
-                            AndAlso (0 < updatedRows.Length)) Then
-                    result = (result + Me._retailerTableTableAdapter.Update(updatedRows))
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
@@ -4286,6 +4402,14 @@ Namespace CALSdatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Function UpdateInsertedRows(ByVal dataSet As CALSdatabaseDataSet, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
+            If (Not (Me._retailerTableTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.RetailerTable.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+                If ((Not (addedRows) Is Nothing)  _
+                            AndAlso (0 < addedRows.Length)) Then
+                    result = (result + Me._retailerTableTableAdapter.Update(addedRows))
+                    allAddedRows.AddRange(addedRows)
+                End If
+            End If
             If (Not (Me._membertableTableAdapter) Is Nothing) Then
                 Dim addedRows() As Global.System.Data.DataRow = dataSet.Membertable.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
                 If ((Not (addedRows) Is Nothing)  _
@@ -4299,14 +4423,6 @@ Namespace CALSdatabaseDataSetTableAdapters
                 If ((Not (addedRows) Is Nothing)  _
                             AndAlso (0 < addedRows.Length)) Then
                     result = (result + Me._productTableTableAdapter.Update(addedRows))
-                    allAddedRows.AddRange(addedRows)
-                End If
-            End If
-            If (Not (Me._retailerTableTableAdapter) Is Nothing) Then
-                Dim addedRows() As Global.System.Data.DataRow = dataSet.RetailerTable.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
-                If ((Not (addedRows) Is Nothing)  _
-                            AndAlso (0 < addedRows.Length)) Then
-                    result = (result + Me._retailerTableTableAdapter.Update(addedRows))
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
@@ -4336,14 +4452,6 @@ Namespace CALSdatabaseDataSetTableAdapters
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
-            If (Not (Me._retailerTableTableAdapter) Is Nothing) Then
-                Dim deletedRows() As Global.System.Data.DataRow = dataSet.RetailerTable.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
-                If ((Not (deletedRows) Is Nothing)  _
-                            AndAlso (0 < deletedRows.Length)) Then
-                    result = (result + Me._retailerTableTableAdapter.Update(deletedRows))
-                    allChangedRows.AddRange(deletedRows)
-                End If
-            End If
             If (Not (Me._productTableTableAdapter) Is Nothing) Then
                 Dim deletedRows() As Global.System.Data.DataRow = dataSet.ProductTable.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
                 If ((Not (deletedRows) Is Nothing)  _
@@ -4357,6 +4465,14 @@ Namespace CALSdatabaseDataSetTableAdapters
                 If ((Not (deletedRows) Is Nothing)  _
                             AndAlso (0 < deletedRows.Length)) Then
                     result = (result + Me._membertableTableAdapter.Update(deletedRows))
+                    allChangedRows.AddRange(deletedRows)
+                End If
+            End If
+            If (Not (Me._retailerTableTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.RetailerTable.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+                If ((Not (deletedRows) Is Nothing)  _
+                            AndAlso (0 < deletedRows.Length)) Then
+                    result = (result + Me._retailerTableTableAdapter.Update(deletedRows))
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If

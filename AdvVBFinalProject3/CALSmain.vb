@@ -7,10 +7,6 @@
         frmWishList.ShowDialog()
     End Sub
 
-    Private Sub CreateNewUserToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CreateNewUserToolStripMenuItem.Click
-        frmUsernameCreation.ShowDialog()
-    End Sub
-
     Private Sub ViewAllToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ViewAllToolStripMenuItem.Click
         frmRetailerList.ShowDialog()
     End Sub
@@ -25,5 +21,9 @@
 
     Private Sub PriceComparisonToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PriceComparisonToolStripMenuItem.Click
         frmProductPriceComparison.ShowDialog()
+    End Sub
+
+    Private Sub CALSmain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

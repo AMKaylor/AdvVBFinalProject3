@@ -298,7 +298,7 @@ SELECT MemberId, ProductId, Product_Name, Marine_Type, Experience, Season, Food_
   <xs:element name="CALSdatabaseDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CALSdatabaseDataSet" msprop:Generator_UserDSName="CALSdatabaseDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Membertable" msprop:Generator_TableClassName="MembertableDataTable" msprop:Generator_TableVarName="tableMembertable" msprop:Generator_RowChangedName="MembertableRowChanged" msprop:Generator_TablePropName="Membertable" msprop:Generator_RowDeletingName="MembertableRowDeleting" msprop:Generator_RowChangingName="MembertableRowChanging" msprop:Generator_RowEvHandlerName="MembertableRowChangeEventHandler" msprop:Generator_RowDeletedName="MembertableRowDeleted" msprop:Generator_RowClassName="MembertableRow" msprop:Generator_UserTableName="Membertable" msprop:Generator_RowEvArgName="MembertableRowChangeEvent">
+        <xs:element name="Membertable" msprop:Generator_TableClassName="MembertableDataTable" msprop:Generator_TableVarName="tableMembertable" msprop:Generator_TablePropName="Membertable" msprop:Generator_RowDeletingName="MembertableRowDeleting" msprop:Generator_RowChangingName="MembertableRowChanging" msprop:Generator_RowEvHandlerName="MembertableRowChangeEventHandler" msprop:Generator_RowDeletedName="MembertableRowDeleted" msprop:Generator_UserTableName="Membertable" msprop:Generator_RowChangedName="MembertableRowChanged" msprop:Generator_RowEvArgName="MembertableRowChangeEvent" msprop:Generator_RowClassName="MembertableRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MemberId" msprop:Generator_ColumnVarNameInTable="columnMemberId" msprop:Generator_ColumnPropNameInRow="MemberId" msprop:Generator_ColumnPropNameInTable="MemberIdColumn" msprop:Generator_UserColumnName="MemberId">
@@ -318,7 +318,7 @@ SELECT MemberId, ProductId, Product_Name, Marine_Type, Experience, Season, Food_
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ProductTable" msprop:Generator_TableClassName="ProductTableDataTable" msprop:Generator_TableVarName="tableProductTable" msprop:Generator_TablePropName="ProductTable" msprop:Generator_RowDeletingName="ProductTableRowDeleting" msprop:Generator_RowChangingName="ProductTableRowChanging" msprop:Generator_RowEvHandlerName="ProductTableRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductTableRowDeleted" msprop:Generator_UserTableName="ProductTable" msprop:Generator_RowChangedName="ProductTableRowChanged" msprop:Generator_RowEvArgName="ProductTableRowChangeEvent" msprop:Generator_RowClassName="ProductTableRow">
+        <xs:element name="ProductTable" msprop:Generator_TableClassName="ProductTableDataTable" msprop:Generator_TableVarName="tableProductTable" msprop:Generator_RowChangedName="ProductTableRowChanged" msprop:Generator_TablePropName="ProductTable" msprop:Generator_RowDeletingName="ProductTableRowDeleting" msprop:Generator_RowChangingName="ProductTableRowChanging" msprop:Generator_RowEvHandlerName="ProductTableRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductTableRowDeleted" msprop:Generator_RowClassName="ProductTableRow" msprop:Generator_UserTableName="ProductTable" msprop:Generator_RowEvArgName="ProductTableRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ProductId" msprop:Generator_ColumnVarNameInTable="columnProductId" msprop:Generator_ColumnPropNameInRow="ProductId" msprop:Generator_ColumnPropNameInTable="ProductIdColumn" msprop:Generator_UserColumnName="ProductId" type="xs:int" />
@@ -368,7 +368,7 @@ SELECT MemberId, ProductId, Product_Name, Marine_Type, Experience, Season, Food_
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="RetailerTable" msprop:Generator_TableClassName="RetailerTableDataTable" msprop:Generator_TableVarName="tableRetailerTable" msprop:Generator_TablePropName="RetailerTable" msprop:Generator_RowDeletingName="RetailerTableRowDeleting" msprop:Generator_RowChangingName="RetailerTableRowChanging" msprop:Generator_RowEvHandlerName="RetailerTableRowChangeEventHandler" msprop:Generator_RowDeletedName="RetailerTableRowDeleted" msprop:Generator_UserTableName="RetailerTable" msprop:Generator_RowChangedName="RetailerTableRowChanged" msprop:Generator_RowEvArgName="RetailerTableRowChangeEvent" msprop:Generator_RowClassName="RetailerTableRow">
+        <xs:element name="RetailerTable" msprop:Generator_TableClassName="RetailerTableDataTable" msprop:Generator_TableVarName="tableRetailerTable" msprop:Generator_RowChangedName="RetailerTableRowChanged" msprop:Generator_TablePropName="RetailerTable" msprop:Generator_RowDeletingName="RetailerTableRowDeleting" msprop:Generator_RowChangingName="RetailerTableRowChanging" msprop:Generator_RowEvHandlerName="RetailerTableRowChangeEventHandler" msprop:Generator_RowDeletedName="RetailerTableRowDeleted" msprop:Generator_RowClassName="RetailerTableRow" msprop:Generator_UserTableName="RetailerTable" msprop:Generator_RowEvArgName="RetailerTableRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="RetailerId" msprop:Generator_ColumnVarNameInTable="columnRetailerId" msprop:Generator_ColumnPropNameInRow="RetailerId" msprop:Generator_ColumnPropNameInTable="RetailerIdColumn" msprop:Generator_UserColumnName="RetailerId" type="xs:int" />
@@ -382,7 +382,7 @@ SELECT MemberId, ProductId, Product_Name, Marine_Type, Experience, Season, Food_
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="WishlistTable" msprop:Generator_TableClassName="WishlistTableDataTable" msprop:Generator_TableVarName="tableWishlistTable" msprop:Generator_TablePropName="WishlistTable" msprop:Generator_RowDeletingName="WishlistTableRowDeleting" msprop:Generator_RowChangingName="WishlistTableRowChanging" msprop:Generator_RowEvHandlerName="WishlistTableRowChangeEventHandler" msprop:Generator_RowDeletedName="WishlistTableRowDeleted" msprop:Generator_UserTableName="WishlistTable" msprop:Generator_RowChangedName="WishlistTableRowChanged" msprop:Generator_RowEvArgName="WishlistTableRowChangeEvent" msprop:Generator_RowClassName="WishlistTableRow">
+        <xs:element name="WishlistTable" msprop:Generator_TableClassName="WishlistTableDataTable" msprop:Generator_TableVarName="tableWishlistTable" msprop:Generator_RowChangedName="WishlistTableRowChanged" msprop:Generator_TablePropName="WishlistTable" msprop:Generator_RowDeletingName="WishlistTableRowDeleting" msprop:Generator_RowChangingName="WishlistTableRowChanging" msprop:Generator_RowEvHandlerName="WishlistTableRowChangeEventHandler" msprop:Generator_RowDeletedName="WishlistTableRowDeleted" msprop:Generator_RowClassName="WishlistTableRow" msprop:Generator_UserTableName="WishlistTable" msprop:Generator_RowEvArgName="WishlistTableRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MemberId" msprop:Generator_ColumnVarNameInTable="columnMemberId" msprop:Generator_ColumnPropNameInRow="MemberId" msprop:Generator_ColumnPropNameInTable="MemberIdColumn" msprop:Generator_UserColumnName="MemberId">
@@ -458,4 +458,12 @@ SELECT MemberId, ProductId, Product_Name, Marine_Type, Experience, Season, Food_
       <xs:field xpath="mstns:MemberId" />
     </xs:unique>
   </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="Membertable_WishlistTable" msdata:parent="Membertable" msdata:child="WishlistTable" msdata:parentkey="MemberId" msdata:childkey="MemberId" msprop:Generator_UserChildTable="WishlistTable" msprop:Generator_ChildPropName="GetWishlistTableRows" msprop:Generator_UserRelationName="Membertable_WishlistTable" msprop:Generator_ParentPropName="MembertableRow" msprop:Generator_RelationVarName="relationMembertable_WishlistTable" msprop:Generator_UserParentTable="Membertable" />
+      <msdata:Relationship name="ProductTable_WishlistTable" msdata:parent="ProductTable" msdata:child="WishlistTable" msdata:parentkey="ProductId" msdata:childkey="ProductId" msprop:Generator_UserChildTable="WishlistTable" msprop:Generator_ChildPropName="GetWishlistTableRows" msprop:Generator_UserRelationName="ProductTable_WishlistTable" msprop:Generator_ParentPropName="ProductTableRow" msprop:Generator_RelationVarName="relationProductTable_WishlistTable" msprop:Generator_UserParentTable="ProductTable" />
+      <msdata:Relationship name="RetailerTable_ProductTable" msdata:parent="RetailerTable" msdata:child="ProductTable" msdata:parentkey="RetailerId" msdata:childkey="RetailerId" msprop:Generator_UserChildTable="ProductTable" msprop:Generator_ChildPropName="GetProductTableRows" msprop:Generator_UserRelationName="RetailerTable_ProductTable" msprop:Generator_RelationVarName="relationRetailerTable_ProductTable" msprop:Generator_UserParentTable="RetailerTable" msprop:Generator_ParentPropName="RetailerTableRow" />
+      <msdata:Relationship name="RetailerTable_WishlistTable" msdata:parent="RetailerTable" msdata:child="WishlistTable" msdata:parentkey="RetailerId" msdata:childkey="RetailerId" msprop:Generator_UserChildTable="WishlistTable" msprop:Generator_ChildPropName="GetWishlistTableRows" msprop:Generator_UserRelationName="RetailerTable_WishlistTable" msprop:Generator_ParentPropName="RetailerTableRow" msprop:Generator_RelationVarName="relationRetailerTable_WishlistTable" msprop:Generator_UserParentTable="RetailerTable" />
+    </xs:appinfo>
+  </xs:annotation>
 </xs:schema>
