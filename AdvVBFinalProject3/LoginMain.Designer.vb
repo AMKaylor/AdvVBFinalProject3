@@ -33,6 +33,7 @@ Partial Class LoginMain
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -42,7 +43,7 @@ Partial Class LoginMain
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CloseApplicationToolStripMenuItem, Me.NewUserToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(310, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(356, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -114,9 +115,9 @@ Partial Class LoginMain
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 204)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 253)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(310, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(356, 22)
         Me.StatusStrip1.TabIndex = 7
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -126,11 +127,23 @@ Partial Class LoginMain
         Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(120, 17)
         Me.ToolStripStatusLabel1.Text = "ToolStripStatusLabel1"
         '
+        'Label4
+        '
+        Me.Label4.BackColor = System.Drawing.SystemColors.Info
+        Me.Label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(12, 213)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(332, 23)
+        Me.Label4.TabIndex = 8
+        Me.Label4.Text = "To Demo enter: [Username: Demo1     Password: Demo1]"
+        '
         'LoginMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(310, 226)
+        Me.ClientSize = New System.Drawing.Size(356, 275)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.Label3)
@@ -162,4 +175,5 @@ Partial Class LoginMain
     Friend WithEvents btnLogin As Button
     Friend WithEvents StatusStrip1 As StatusStrip
     Friend WithEvents ToolStripStatusLabel1 As ToolStripStatusLabel
+    Friend WithEvents Label4 As Label
 End Class
