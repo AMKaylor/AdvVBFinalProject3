@@ -126,6 +126,8 @@
     <Compile Include="ProductPriceComparison.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Products.vb" />
+    <Compile Include="Retailer.vb" />
     <Compile Include="RetailerList.Designer.vb">
       <DependentUpon>RetailerList.vb</DependentUpon>
     </Compile>

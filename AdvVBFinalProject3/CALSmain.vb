@@ -1,4 +1,7 @@
-﻿Public Class CALSmain
+﻿Option Explicit On
+Option Strict On
+
+Public Class CALSmain
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
         Me.Close()
     End Sub

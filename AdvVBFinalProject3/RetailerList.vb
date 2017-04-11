@@ -1,4 +1,7 @@
-﻿Public Class frmRetailerList
+﻿Option Explicit On
+Option Strict On
+
+Public Class frmRetailerList
 
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
         Me.Close()

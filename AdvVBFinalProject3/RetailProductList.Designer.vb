@@ -23,14 +23,14 @@ Partial Class frmRetailProductList
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TypeOfMarineLifeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.cboTypeOfLife = New System.Windows.Forms.ToolStripComboBox()
         Me.BySeasonToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.cboSeason = New System.Windows.Forms.ToolStripComboBox()
         Me.AddToWishlistToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -42,24 +42,6 @@ Partial Class frmRetailProductList
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(596, 27)
         Me.MenuStrip1.TabIndex = 0
-        '
-        'StatusStrip1
-        '
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 397)
-        Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(596, 22)
-        Me.StatusStrip1.TabIndex = 1
-        Me.StatusStrip1.Text = "StatusStrip1"
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace
-        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 54)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(572, 322)
-        Me.DataGridView1.TabIndex = 2
         '
         'ExitToolStripMenuItem
         '
@@ -94,6 +76,24 @@ Partial Class frmRetailProductList
         Me.AddToWishlistToolStripMenuItem.Name = "AddToWishlistToolStripMenuItem"
         Me.AddToWishlistToolStripMenuItem.Size = New System.Drawing.Size(99, 23)
         Me.AddToWishlistToolStripMenuItem.Text = "Add to Wishlist"
+        '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 397)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(596, 22)
+        Me.StatusStrip1.TabIndex = 1
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace
+        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 54)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(572, 322)
+        Me.DataGridView1.TabIndex = 2
         '
         'frmRetailProductList
         '
