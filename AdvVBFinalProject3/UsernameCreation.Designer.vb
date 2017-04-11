@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmUsernameCreation
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,20 +20,21 @@ Partial Class frmUsernameCreation
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.btnSubmit = New System.Windows.Forms.Button()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtVerifyPassword = New System.Windows.Forms.TextBox()
         Me.btnCancel = New System.Windows.Forms.Button()
-        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.LastStatus = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.lblStatus = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.StatusStrip1.SuspendLayout()
+        Me.CALSdatabaseDataSet = New AdvVBFinalProject3.CALSdatabaseDataSet()
+        Me.TableAdapterManager = New AdvVBFinalProject3.CALSdatabaseDataSetTableAdapters.TableAdapterManager()
+        Me.MembertableBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MemberTableTableAdapter = New AdvVBFinalProject3.CALSdatabaseDataSetTableAdapters.MemberTableTableAdapter()
+        CType(Me.CALSdatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MembertableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -67,72 +68,58 @@ Partial Class frmUsernameCreation
         '
         Me.txtPassword.Location = New System.Drawing.Point(122, 59)
         Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassword.Size = New System.Drawing.Size(145, 20)
         Me.txtPassword.TabIndex = 4
         '
         'btnSubmit
         '
-        Me.btnSubmit.Location = New System.Drawing.Point(173, 159)
+        Me.btnSubmit.Location = New System.Drawing.Point(173, 106)
         Me.btnSubmit.Name = "btnSubmit"
         Me.btnSubmit.Size = New System.Drawing.Size(94, 23)
         Me.btnSubmit.TabIndex = 5
         Me.btnSubmit.Text = "Submit"
         Me.btnSubmit.UseVisualStyleBackColor = True
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(10, 101)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(108, 16)
-        Me.Label3.TabIndex = 6
-        Me.Label3.Text = "Verify Password:"
-        '
-        'txtVerifyPassword
-        '
-        Me.txtVerifyPassword.Location = New System.Drawing.Point(122, 100)
-        Me.txtVerifyPassword.Name = "txtVerifyPassword"
-        Me.txtVerifyPassword.Size = New System.Drawing.Size(145, 20)
-        Me.txtVerifyPassword.TabIndex = 7
-        '
         'btnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(47, 159)
+        Me.btnCancel.Location = New System.Drawing.Point(47, 106)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(94, 23)
         Me.btnCancel.TabIndex = 8
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
         '
-        'StatusStrip1
+        'CALSdatabaseDataSet
         '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LastStatus, Me.lblStatus})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 226)
-        Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(314, 22)
-        Me.StatusStrip1.TabIndex = 9
-        Me.StatusStrip1.Text = "StatusStrip1"
+        Me.CALSdatabaseDataSet.DataSetName = "CALSdatabaseDataSet"
+        Me.CALSdatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'LastStatus
+        'TableAdapterManager
         '
-        Me.LastStatus.Name = "LastStatus"
-        Me.LastStatus.Size = New System.Drawing.Size(0, 17)
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.Connection = Nothing
+        Me.TableAdapterManager.MemberTableTableAdapter = Nothing
+        Me.TableAdapterManager.ProductTableTableAdapter = Nothing
+        Me.TableAdapterManager.RetailerTableTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = AdvVBFinalProject3.CALSdatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.WishlistTableTableAdapter = Nothing
         '
-        'lblStatus
+        'MembertableBindingSource
         '
-        Me.lblStatus.Name = "lblStatus"
-        Me.lblStatus.Size = New System.Drawing.Size(0, 17)
+        Me.MembertableBindingSource.DataMember = "Membertable"
+        Me.MembertableBindingSource.DataSource = Me.CALSdatabaseDataSet
+        '
+        'MemberTableTableAdapter
+        '
+        Me.MemberTableTableAdapter.ClearBeforeFill = True
         '
         'frmUsernameCreation
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(314, 248)
-        Me.Controls.Add(Me.StatusStrip1)
+        Me.ClientSize = New System.Drawing.Size(304, 158)
         Me.Controls.Add(Me.btnCancel)
-        Me.Controls.Add(Me.txtVerifyPassword)
-        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.btnSubmit)
         Me.Controls.Add(Me.txtPassword)
         Me.Controls.Add(Me.Label2)
@@ -140,8 +127,8 @@ Partial Class frmUsernameCreation
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmUsernameCreation"
         Me.Text = "Username Creation"
-        Me.StatusStrip1.ResumeLayout(False)
-        Me.StatusStrip1.PerformLayout()
+        CType(Me.CALSdatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MembertableBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -152,10 +139,9 @@ Partial Class frmUsernameCreation
     Friend WithEvents Label2 As Label
     Friend WithEvents txtPassword As TextBox
     Friend WithEvents btnSubmit As Button
-    Friend WithEvents Label3 As Label
-    Friend WithEvents txtVerifyPassword As TextBox
     Friend WithEvents btnCancel As Button
-    Friend WithEvents StatusStrip1 As StatusStrip
-    Friend WithEvents LastStatus As ToolStripStatusLabel
-    Friend WithEvents lblStatus As ToolStripStatusLabel
+    Friend WithEvents CALSdatabaseDataSet As CALSdatabaseDataSet
+    Friend WithEvents MembertableBindingSource As BindingSource
+    Friend WithEvents TableAdapterManager As CALSdatabaseDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents MemberTableTableAdapter As CALSdatabaseDataSetTableAdapters.MemberTableTableAdapter
 End Class

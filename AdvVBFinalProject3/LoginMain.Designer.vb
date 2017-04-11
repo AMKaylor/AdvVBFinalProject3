@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class LoginMain
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,8 +20,9 @@ Partial Class LoginMain
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.CloseApplicationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewUserToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -31,11 +32,14 @@ Partial Class LoginMain
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnLogin = New System.Windows.Forms.Button()
-        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.CALSdatabaseDataSet = New AdvVBFinalProject3.CALSdatabaseDataSet()
+        Me.MemberTableBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MemberTableTableAdapter = New AdvVBFinalProject3.CALSdatabaseDataSetTableAdapters.MemberTableTableAdapter()
+        Me.TableAdapterManager = New AdvVBFinalProject3.CALSdatabaseDataSetTableAdapters.TableAdapterManager()
         Me.MenuStrip1.SuspendLayout()
-        Me.StatusStrip1.SuspendLayout()
+        CType(Me.CALSdatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MemberTableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -43,7 +47,7 @@ Partial Class LoginMain
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CloseApplicationToolStripMenuItem, Me.NewUserToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(356, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(359, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -70,6 +74,7 @@ Partial Class LoginMain
         '
         Me.txtPasswordLogin.Location = New System.Drawing.Point(106, 124)
         Me.txtPasswordLogin.Name = "txtPasswordLogin"
+        Me.txtPasswordLogin.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPasswordLogin.Size = New System.Drawing.Size(141, 20)
         Me.txtPasswordLogin.TabIndex = 2
         '
@@ -112,21 +117,6 @@ Partial Class LoginMain
         Me.btnLogin.Text = "Login"
         Me.btnLogin.UseVisualStyleBackColor = True
         '
-        'StatusStrip1
-        '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 253)
-        Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(356, 22)
-        Me.StatusStrip1.TabIndex = 7
-        Me.StatusStrip1.Text = "StatusStrip1"
-        '
-        'ToolStripStatusLabel1
-        '
-        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(120, 17)
-        Me.ToolStripStatusLabel1.Text = "ToolStripStatusLabel1"
-        '
         'Label4
         '
         Me.Label4.BackColor = System.Drawing.SystemColors.Info
@@ -138,13 +128,35 @@ Partial Class LoginMain
         Me.Label4.TabIndex = 8
         Me.Label4.Text = "To Demo enter: [Username: Demo1     Password: Demo1]"
         '
+        'CALSdatabaseDataSet
+        '
+        Me.CALSdatabaseDataSet.DataSetName = "CALSdatabaseDataSet"
+        Me.CALSdatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'MemberTableBindingSource
+        '
+        Me.MemberTableBindingSource.DataMember = "MemberTable"
+        Me.MemberTableBindingSource.DataSource = Me.CALSdatabaseDataSet
+        '
+        'MemberTableTableAdapter
+        '
+        Me.MemberTableTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.MemberTableTableAdapter = Me.MemberTableTableAdapter
+        Me.TableAdapterManager.ProductTableTableAdapter = Nothing
+        Me.TableAdapterManager.RetailerTableTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = AdvVBFinalProject3.CALSdatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.WishlistTableTableAdapter = Nothing
+        '
         'LoginMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(356, 275)
+        Me.ClientSize = New System.Drawing.Size(359, 262)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -157,8 +169,8 @@ Partial Class LoginMain
         Me.Text = "LoginMain"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
-        Me.StatusStrip1.ResumeLayout(False)
-        Me.StatusStrip1.PerformLayout()
+        CType(Me.CALSdatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MemberTableBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -173,7 +185,9 @@ Partial Class LoginMain
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents btnLogin As Button
-    Friend WithEvents StatusStrip1 As StatusStrip
-    Friend WithEvents ToolStripStatusLabel1 As ToolStripStatusLabel
     Friend WithEvents Label4 As Label
+    Friend WithEvents CALSdatabaseDataSet As CALSdatabaseDataSet
+    Friend WithEvents MemberTableBindingSource As BindingSource
+    Friend WithEvents MemberTableTableAdapter As CALSdatabaseDataSetTableAdapters.MemberTableTableAdapter
+    Friend WithEvents TableAdapterManager As CALSdatabaseDataSetTableAdapters.TableAdapterManager
 End Class
