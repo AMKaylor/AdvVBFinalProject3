@@ -489,7 +489,7 @@ WHERE        (Username = @Username) AND (Password = @Password)</CommandText>
   <xs:element name="CALSdatabaseDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CALSdatabaseDataSet" msprop:Generator_UserDSName="CALSdatabaseDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="RetailerTable" msprop:Generator_TableClassName="RetailerTableDataTable" msprop:Generator_TableVarName="tableRetailerTable" msprop:Generator_TablePropName="RetailerTable" msprop:Generator_RowDeletingName="RetailerTableRowDeleting" msprop:Generator_RowChangingName="RetailerTableRowChanging" msprop:Generator_RowEvHandlerName="RetailerTableRowChangeEventHandler" msprop:Generator_RowDeletedName="RetailerTableRowDeleted" msprop:Generator_UserTableName="RetailerTable" msprop:Generator_RowChangedName="RetailerTableRowChanged" msprop:Generator_RowEvArgName="RetailerTableRowChangeEvent" msprop:Generator_RowClassName="RetailerTableRow">
+        <xs:element name="RetailerTable" msprop:Generator_TableClassName="RetailerTableDataTable" msprop:Generator_TableVarName="tableRetailerTable" msprop:Generator_RowChangedName="RetailerTableRowChanged" msprop:Generator_TablePropName="RetailerTable" msprop:Generator_RowDeletingName="RetailerTableRowDeleting" msprop:Generator_RowChangingName="RetailerTableRowChanging" msprop:Generator_RowEvHandlerName="RetailerTableRowChangeEventHandler" msprop:Generator_RowDeletedName="RetailerTableRowDeleted" msprop:Generator_RowClassName="RetailerTableRow" msprop:Generator_UserTableName="RetailerTable" msprop:Generator_RowEvArgName="RetailerTableRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="RetailerId" msprop:Generator_ColumnVarNameInTable="columnRetailerId" msprop:Generator_ColumnPropNameInRow="RetailerId" msprop:Generator_ColumnPropNameInTable="RetailerIdColumn" msprop:Generator_UserColumnName="RetailerId" type="xs:int" />
@@ -503,7 +503,7 @@ WHERE        (Username = @Username) AND (Password = @Password)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ProductTable" msprop:Generator_TableClassName="ProductTableDataTable" msprop:Generator_TableVarName="tableProductTable" msprop:Generator_TablePropName="ProductTable" msprop:Generator_RowDeletingName="ProductTableRowDeleting" msprop:Generator_RowChangingName="ProductTableRowChanging" msprop:Generator_RowEvHandlerName="ProductTableRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductTableRowDeleted" msprop:Generator_UserTableName="ProductTable" msprop:Generator_RowChangedName="ProductTableRowChanged" msprop:Generator_RowEvArgName="ProductTableRowChangeEvent" msprop:Generator_RowClassName="ProductTableRow">
+        <xs:element name="ProductTable" msprop:Generator_TableClassName="ProductTableDataTable" msprop:Generator_TableVarName="tableProductTable" msprop:Generator_RowChangedName="ProductTableRowChanged" msprop:Generator_TablePropName="ProductTable" msprop:Generator_RowDeletingName="ProductTableRowDeleting" msprop:Generator_RowChangingName="ProductTableRowChanging" msprop:Generator_RowEvHandlerName="ProductTableRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductTableRowDeleted" msprop:Generator_RowClassName="ProductTableRow" msprop:Generator_UserTableName="ProductTable" msprop:Generator_RowEvArgName="ProductTableRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ProductId" msprop:Generator_ColumnVarNameInTable="columnProductId" msprop:Generator_ColumnPropNameInRow="ProductId" msprop:Generator_ColumnPropNameInTable="ProductIdColumn" msprop:Generator_UserColumnName="ProductId" type="xs:int" />
@@ -554,7 +554,7 @@ WHERE        (Username = @Username) AND (Password = @Password)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="WishlistTable" msprop:Generator_TableClassName="WishlistTableDataTable" msprop:Generator_TableVarName="tableWishlistTable" msprop:Generator_RowChangedName="WishlistTableRowChanged" msprop:Generator_TablePropName="WishlistTable" msprop:Generator_RowDeletingName="WishlistTableRowDeleting" msprop:Generator_RowChangingName="WishlistTableRowChanging" msprop:Generator_RowEvHandlerName="WishlistTableRowChangeEventHandler" msprop:Generator_RowDeletedName="WishlistTableRowDeleted" msprop:Generator_RowClassName="WishlistTableRow" msprop:Generator_UserTableName="WishlistTable" msprop:Generator_RowEvArgName="WishlistTableRowChangeEvent">
+        <xs:element name="WishlistTable" msprop:Generator_TableClassName="WishlistTableDataTable" msprop:Generator_TableVarName="tableWishlistTable" msprop:Generator_TablePropName="WishlistTable" msprop:Generator_RowDeletingName="WishlistTableRowDeleting" msprop:Generator_RowChangingName="WishlistTableRowChanging" msprop:Generator_RowEvHandlerName="WishlistTableRowChangeEventHandler" msprop:Generator_RowDeletedName="WishlistTableRowDeleted" msprop:Generator_UserTableName="WishlistTable" msprop:Generator_RowChangedName="WishlistTableRowChanged" msprop:Generator_RowEvArgName="WishlistTableRowChangeEvent" msprop:Generator_RowClassName="WishlistTableRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="UserId" msprop:Generator_ColumnVarNameInTable="columnUserId" msprop:Generator_ColumnPropNameInRow="UserId" msprop:Generator_ColumnPropNameInTable="UserIdColumn" msprop:Generator_UserColumnName="UserId" type="xs:int" />
@@ -605,7 +605,7 @@ WHERE        (Username = @Username) AND (Password = @Password)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="MemberTable" msprop:Generator_TableClassName="MemberTableDataTable" msprop:Generator_TableVarName="tableMemberTable" msprop:Generator_RowChangedName="MemberTableRowChanged" msprop:Generator_TablePropName="MemberTable" msprop:Generator_RowDeletingName="MemberTableRowDeleting" msprop:Generator_RowChangingName="MemberTableRowChanging" msprop:Generator_RowEvHandlerName="MemberTableRowChangeEventHandler" msprop:Generator_RowDeletedName="MemberTableRowDeleted" msprop:Generator_RowClassName="MemberTableRow" msprop:Generator_UserTableName="MemberTable" msprop:Generator_RowEvArgName="MemberTableRowChangeEvent">
+        <xs:element name="MemberTable" msprop:Generator_TableClassName="MemberTableDataTable" msprop:Generator_TableVarName="tableMemberTable" msprop:Generator_TablePropName="MemberTable" msprop:Generator_RowDeletingName="MemberTableRowDeleting" msprop:Generator_RowChangingName="MemberTableRowChanging" msprop:Generator_RowEvHandlerName="MemberTableRowChangeEventHandler" msprop:Generator_RowDeletedName="MemberTableRowDeleted" msprop:Generator_UserTableName="MemberTable" msprop:Generator_RowChangedName="MemberTableRowChanged" msprop:Generator_RowEvArgName="MemberTableRowChangeEvent" msprop:Generator_RowClassName="MemberTableRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="UserId" msprop:Generator_ColumnVarNameInTable="columnUserId" msprop:Generator_ColumnPropNameInRow="UserId" msprop:Generator_ColumnPropNameInTable="UserIdColumn" msprop:Generator_UserColumnName="UserId" type="xs:int" />
@@ -647,7 +647,7 @@ WHERE        (Username = @Username) AND (Password = @Password)</CommandText>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="RetailerTable_ProductTable" msdata:parent="RetailerTable" msdata:child="ProductTable" msdata:parentkey="RetailerId" msdata:childkey="RetailerId" msprop:Generator_UserChildTable="ProductTable" msprop:Generator_ChildPropName="GetProductTableRows" msprop:Generator_UserRelationName="RetailerTable_ProductTable" msprop:Generator_RelationVarName="relationRetailerTable_ProductTable" msprop:Generator_UserParentTable="RetailerTable" msprop:Generator_ParentPropName="RetailerTableRow" />
+      <msdata:Relationship name="RetailerTable_ProductTable" msdata:parent="RetailerTable" msdata:child="ProductTable" msdata:parentkey="RetailerId" msdata:childkey="RetailerId" msprop:Generator_UserChildTable="ProductTable" msprop:Generator_ChildPropName="GetProductTableRows" msprop:Generator_UserRelationName="RetailerTable_ProductTable" msprop:Generator_ParentPropName="RetailerTableRow" msprop:Generator_RelationVarName="relationRetailerTable_ProductTable" msprop:Generator_UserParentTable="RetailerTable" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

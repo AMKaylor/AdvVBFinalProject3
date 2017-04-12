@@ -22,7 +22,6 @@ Partial Class frmProductPriceComparison
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -43,14 +42,6 @@ Partial Class frmProductPriceComparison
         Me.btnReset = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'StatusStrip1
-        '
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 305)
-        Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(668, 22)
-        Me.StatusStrip1.TabIndex = 0
-        Me.StatusStrip1.Text = "StatusStrip1"
         '
         'MenuStrip1
         '
@@ -73,7 +64,7 @@ Partial Class frmProductPriceComparison
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(12, 36)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(646, 16)
+        Me.Label1.Size = New System.Drawing.Size(666, 16)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "**Go through the steps to find a price comparison between two items from differen" &
     "t retailers.**"
@@ -127,10 +118,12 @@ Partial Class frmProductPriceComparison
         'Label5
         '
         Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.SystemColors.Info
+        Me.Label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(12, 282)
+        Me.Label5.Location = New System.Drawing.Point(12, 275)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(311, 13)
+        Me.Label5.Size = New System.Drawing.Size(313, 15)
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "**Note: The items in the box are verified that both retailers sale.**"
         '
@@ -218,7 +211,7 @@ Partial Class frmProductPriceComparison
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(668, 327)
+        Me.ClientSize = New System.Drawing.Size(668, 299)
         Me.Controls.Add(Me.btnReset)
         Me.Controls.Add(Me.btnCompare)
         Me.Controls.Add(Me.lblPriceDifference)
@@ -235,7 +228,6 @@ Partial Class frmProductPriceComparison
         Me.Controls.Add(Me.cboRetailer1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmProductPriceComparison"
@@ -246,8 +238,6 @@ Partial Class frmProductPriceComparison
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents StatusStrip1 As StatusStrip
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label1 As Label

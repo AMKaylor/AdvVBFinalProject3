@@ -14,10 +14,6 @@ Public Class CALSmain
         frmRetailerList.ShowDialog()
     End Sub
 
-    Private Sub RetailerProductListToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RetailerProductListToolStripMenuItem.Click
-        frmRetailProductList.ShowDialog()
-    End Sub
-
     Private Sub ViewAllToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ViewAllToolStripMenuItem1.Click
         frmViewAllProducts.ShowDialog()
     End Sub
@@ -28,5 +24,9 @@ Public Class CALSmain
 
     Private Sub CALSmain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
+
+    Private Sub RetailerProductsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RetailerProductsToolStripMenuItem.Click
+        frmRetailProductList.ShowDialog()
     End Sub
 End Class

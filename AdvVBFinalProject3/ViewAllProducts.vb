@@ -54,12 +54,6 @@ Public Class frmViewAllProducts
         Me.Close()
     End Sub
 
-    Private Sub btnAll_Click(sender As Object, e As EventArgs) Handles btnAll.Click
-
-        dgvAllProducts.DataSource = mProducts.Items
-
-    End Sub
-
     Private Sub cboRetailer_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboRetailer.SelectedIndexChanged
 
         If Not formLoading Then
@@ -84,12 +78,24 @@ Public Class frmViewAllProducts
             dgvAllProducts.DataSource = mProducts.Items()
         End If
 
+
     End Sub
 
     Private Sub btnSearchDiet_Click(sender As Object, e As EventArgs) Handles btnSearchDiet.Click
 
         'Loops through the combobox text and picks which sql statement to run depending on what is selected.
 
+        If cboFoodDiet.Text = "Filtering" Then
+            dgvAllProducts.DataSource = mProducts.FilterByDietF()
+        ElseIf cboFoodDiet.Text = "Carnivore" Then
+            dgvAllProducts.DataSource = mProducts.FilterByDietC()
+        ElseIf cboFoodDiet.Text = "Herbivore" Then
+            dgvAllProducts.DataSource = mProducts.FilterByDietH()
+        ElseIf cboFoodDiet.Text = "Omnivore" Then
+            dgvAllProducts.DataSource = mProducts.FilterByDietO()
+        Else
+            dgvAllProducts.DataSource = mProducts.Items()
+        End If
 
     End Sub
 
@@ -97,6 +103,23 @@ Public Class frmViewAllProducts
 
         'Loops through the combobox text and picks which sql statement to run depending on what is selected.
 
+        If cboSeason.Text = "Spring" Then
+            dgvAllProducts.DataSource = mProducts.FilterBySeasonSP()
+        ElseIf cboSeason.Text = "Summer" Then
+            dgvAllProducts.DataSource = mProducts.FilterBySeasonSU()
+        ElseIf cboSeason.Text = "Winter" Then
+            dgvAllProducts.DataSource = mProducts.FilterBySeasonW()
+        ElseIf cboSeason.Text = "Spring/Summer" Then
+            dgvAllProducts.DataSource = mProducts.FilterBySeasonSS()
+        ElseIf cboSeason.Text = "Fall/Winter" Then
+            dgvAllProducts.DataSource = mProducts.FilterBySeasonFW()
+        ElseIf cboSeason.Text = "Spring/Summer/Fall" Then
+            dgvAllProducts.DataSource = mProducts.FilterBySeasonSSF()
+        ElseIf cboSeason.Text = "All Year" Then
+            dgvAllProducts.DataSource = mProducts.FilterBySeasonAll()
+        Else
+            dgvAllProducts.DataSource = mProducts.Items()
+        End If
 
     End Sub
 
@@ -104,6 +127,21 @@ Public Class frmViewAllProducts
 
         'Loops through the combobox text and picks which sql statement to run depending on what is selected.
 
+        If cboTypeOfLife.Text = "Soft Coral" Then
+            dgvAllProducts.DataSource = mProducts.FilterByMarineLifeS()
+        ElseIf cboTypeOfLife.Text = "Hard Coral" Then
+            dgvAllProducts.DataSource = mProducts.FilterByMarineLifeH()
+        ElseIf cboTypeOfLife.Text = "Fish" Then
+            dgvAllProducts.DataSource = mProducts.FilterByMarineLifeF()
+        Else
+            dgvAllProducts.DataSource = mProducts.Items()
+        End If
+
+    End Sub
+
+    Private Sub btnAll_Click(sender As Object, e As EventArgs) Handles btnAll.Click
+
+        dgvAllProducts.DataSource = mProducts.Items()
 
     End Sub
 End Class
