@@ -23,9 +23,24 @@ Partial Class frmViewAllProducts
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmViewAllProducts))
         Me.dgvAllProducts = New System.Windows.Forms.DataGridView()
+        Me.cboTypeOfLife = New System.Windows.Forms.ComboBox()
+        Me.cboSeason = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.btnExit = New System.Windows.Forms.ToolStripButton()
+        Me.btnAll = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
+        Me.cboRetailer = New System.Windows.Forms.ToolStripComboBox()
+        Me.btnAddToWishlist = New System.Windows.Forms.ToolStripButton()
+        Me.cboFoodDiet = New System.Windows.Forms.ComboBox()
+        Me.btnSearch = New System.Windows.Forms.Button()
+        Me.cboExperience = New System.Windows.Forms.ComboBox()
+        Me.ProductTableBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CALSdatabaseDataSet1 = New AdvVBFinalProject3.CALSdatabaseDataSet()
+        Me.CALSdatabaseDataSet = New AdvVBFinalProject3.CALSdatabaseDataSet()
+        Me.ProductTableTableAdapter = New AdvVBFinalProject3.CALSdatabaseDataSetTableAdapters.ProductTableTableAdapter()
         Me.ProductNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MarineTypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ExperienceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -33,29 +48,24 @@ Partial Class frmViewAllProducts
         Me.FoodDietDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.RetailerNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ProductTableBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.CALSdatabaseDataSet = New AdvVBFinalProject3.CALSdatabaseDataSet()
-        Me.cboTypeOfLife = New System.Windows.Forms.ComboBox()
-        Me.cboSeason = New System.Windows.Forms.ComboBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.btnWishlist = New System.Windows.Forms.Button()
-        Me.ProductTableTableAdapter = New AdvVBFinalProject3.CALSdatabaseDataSetTableAdapters.ProductTableTableAdapter()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.btnExit = New System.Windows.Forms.ToolStripButton()
-        Me.btnAll = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
-        Me.cboRetailer = New System.Windows.Forms.ToolStripComboBox()
-        Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
-        Me.cboExperienceLvl = New System.Windows.Forms.ToolStripComboBox()
-        Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
-        Me.cboDiet = New System.Windows.Forms.ToolStripComboBox()
+        Me.Legend = New System.Windows.Forms.GroupBox()
+        Me.grpExperience = New System.Windows.Forms.GroupBox()
+        Me.btnSearchDiet = New System.Windows.Forms.Button()
+        Me.grpFoodDiet = New System.Windows.Forms.GroupBox()
+        Me.btnSearchSeason = New System.Windows.Forms.Button()
+        Me.btnSearchMarineLife = New System.Windows.Forms.Button()
+        Me.grpSeason = New System.Windows.Forms.GroupBox()
+        Me.grpMarineLife = New System.Windows.Forms.GroupBox()
         CType(Me.dgvAllProducts, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ProductTableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CALSdatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
+        CType(Me.ProductTableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CALSdatabaseDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CALSdatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Legend.SuspendLayout()
+        Me.grpExperience.SuspendLayout()
+        Me.grpFoodDiet.SuspendLayout()
+        Me.grpSeason.SuspendLayout()
+        Me.grpMarineLife.SuspendLayout()
         Me.SuspendLayout()
         '
         'dgvAllProducts
@@ -68,11 +78,132 @@ Partial Class frmViewAllProducts
         Me.dgvAllProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvAllProducts.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ProductNameDataGridViewTextBoxColumn, Me.MarineTypeDataGridViewTextBoxColumn, Me.ExperienceDataGridViewTextBoxColumn, Me.SeasonDataGridViewTextBoxColumn, Me.FoodDietDataGridViewTextBoxColumn, Me.RetailerNameDataGridViewTextBoxColumn, Me.PriceDataGridViewTextBoxColumn})
         Me.dgvAllProducts.DataSource = Me.ProductTableBindingSource
-        Me.dgvAllProducts.Location = New System.Drawing.Point(12, 88)
+        Me.dgvAllProducts.Location = New System.Drawing.Point(43, 155)
         Me.dgvAllProducts.Name = "dgvAllProducts"
         Me.dgvAllProducts.ReadOnly = True
-        Me.dgvAllProducts.Size = New System.Drawing.Size(783, 274)
+        Me.dgvAllProducts.Size = New System.Drawing.Size(783, 283)
         Me.dgvAllProducts.TabIndex = 1
+        '
+        'cboTypeOfLife
+        '
+        Me.cboTypeOfLife.BackColor = System.Drawing.SystemColors.Window
+        Me.cboTypeOfLife.FormattingEnabled = True
+        Me.cboTypeOfLife.Location = New System.Drawing.Point(10, 23)
+        Me.cboTypeOfLife.Name = "cboTypeOfLife"
+        Me.cboTypeOfLife.Size = New System.Drawing.Size(122, 23)
+        Me.cboTypeOfLife.TabIndex = 5
+        '
+        'cboSeason
+        '
+        Me.cboSeason.BackColor = System.Drawing.SystemColors.Window
+        Me.cboSeason.FormattingEnabled = True
+        Me.cboSeason.Location = New System.Drawing.Point(15, 20)
+        Me.cboSeason.Name = "cboSeason"
+        Me.cboSeason.Size = New System.Drawing.Size(122, 23)
+        Me.cboSeason.TabIndex = 6
+        '
+        'Label3
+        '
+        Me.Label3.BackColor = System.Drawing.SystemColors.Info
+        Me.Label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(9, 20)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(434, 46)
+        Me.Label3.TabIndex = 10
+        Me.Label3.Text = "Su -Summer,  Sp -Spring,  W -Winter,  SS - Spring/Summer,  FW -Fall/Winter,  SSF " &
+    "- Spring/Summer/Fall,  SSFW -Spring/Summer/Fall/Winter"
+        '
+        'ToolStrip1
+        '
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnExit, Me.btnAll, Me.ToolStripLabel1, Me.cboRetailer, Me.btnAddToWishlist})
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.Size = New System.Drawing.Size(895, 25)
+        Me.ToolStrip1.TabIndex = 12
+        Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'btnExit
+        '
+        Me.btnExit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.btnExit.Image = CType(resources.GetObject("btnExit.Image"), System.Drawing.Image)
+        Me.btnExit.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(29, 22)
+        Me.btnExit.Text = "Exit"
+        '
+        'btnAll
+        '
+        Me.btnAll.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.btnAll.Image = CType(resources.GetObject("btnAll.Image"), System.Drawing.Image)
+        Me.btnAll.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnAll.Name = "btnAll"
+        Me.btnAll.Size = New System.Drawing.Size(25, 22)
+        Me.btnAll.Text = "All"
+        '
+        'ToolStripLabel1
+        '
+        Me.ToolStripLabel1.Name = "ToolStripLabel1"
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(93, 22)
+        Me.ToolStripLabel1.Text = "Specific Retailer:"
+        '
+        'cboRetailer
+        '
+        Me.cboRetailer.Name = "cboRetailer"
+        Me.cboRetailer.Size = New System.Drawing.Size(121, 25)
+        '
+        'btnAddToWishlist
+        '
+        Me.btnAddToWishlist.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.btnAddToWishlist.Image = CType(resources.GetObject("btnAddToWishlist.Image"), System.Drawing.Image)
+        Me.btnAddToWishlist.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnAddToWishlist.Name = "btnAddToWishlist"
+        Me.btnAddToWishlist.Size = New System.Drawing.Size(91, 22)
+        Me.btnAddToWishlist.Text = "Add to Wishlist"
+        '
+        'cboFoodDiet
+        '
+        Me.cboFoodDiet.FormattingEnabled = True
+        Me.cboFoodDiet.Location = New System.Drawing.Point(13, 19)
+        Me.cboFoodDiet.Name = "cboFoodDiet"
+        Me.cboFoodDiet.Size = New System.Drawing.Size(121, 23)
+        Me.cboFoodDiet.TabIndex = 16
+        '
+        'btnSearch
+        '
+        Me.btnSearch.Location = New System.Drawing.Point(37, 50)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.Size = New System.Drawing.Size(75, 23)
+        Me.btnSearch.TabIndex = 18
+        Me.btnSearch.Text = "Search"
+        Me.btnSearch.UseVisualStyleBackColor = True
+        '
+        'cboExperience
+        '
+        Me.cboExperience.FormattingEnabled = True
+        Me.cboExperience.Location = New System.Drawing.Point(14, 21)
+        Me.cboExperience.Name = "cboExperience"
+        Me.cboExperience.Size = New System.Drawing.Size(121, 23)
+        Me.cboExperience.TabIndex = 19
+        '
+        'ProductTableBindingSource
+        '
+        Me.ProductTableBindingSource.DataMember = "ProductTable"
+        Me.ProductTableBindingSource.DataSource = Me.CALSdatabaseDataSet1
+        '
+        'CALSdatabaseDataSet1
+        '
+        Me.CALSdatabaseDataSet1.DataSetName = "CALSdatabaseDataSet"
+        Me.CALSdatabaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'CALSdatabaseDataSet
+        '
+        Me.CALSdatabaseDataSet.DataSetName = "CALSdatabaseDataSet"
+        Me.CALSdatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ProductTableTableAdapter
+        '
+        Me.ProductTableTableAdapter.ClearBeforeFill = True
         '
         'ProductNameDataGridViewTextBoxColumn
         '
@@ -119,178 +250,121 @@ Partial Class frmViewAllProducts
         'PriceDataGridViewTextBoxColumn
         '
         Me.PriceDataGridViewTextBoxColumn.DataPropertyName = "Price"
-        DataGridViewCellStyle1.Format = "C2"
-        DataGridViewCellStyle1.NullValue = Nothing
-        Me.PriceDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle1
         Me.PriceDataGridViewTextBoxColumn.HeaderText = "Price"
         Me.PriceDataGridViewTextBoxColumn.Name = "PriceDataGridViewTextBoxColumn"
         Me.PriceDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'ProductTableBindingSource
+        'Legend
         '
-        Me.ProductTableBindingSource.DataMember = "ProductTable"
-        Me.ProductTableBindingSource.DataSource = Me.CALSdatabaseDataSet
+        Me.Legend.Controls.Add(Me.Label3)
+        Me.Legend.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Legend.Location = New System.Drawing.Point(13, 456)
+        Me.Legend.Name = "Legend"
+        Me.Legend.Size = New System.Drawing.Size(451, 77)
+        Me.Legend.TabIndex = 20
+        Me.Legend.TabStop = False
+        Me.Legend.Text = "Legend"
         '
-        'CALSdatabaseDataSet
+        'grpExperience
         '
-        Me.CALSdatabaseDataSet.DataSetName = "CALSdatabaseDataSet"
-        Me.CALSdatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.grpExperience.Controls.Add(Me.cboExperience)
+        Me.grpExperience.Controls.Add(Me.btnSearch)
+        Me.grpExperience.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.grpExperience.Location = New System.Drawing.Point(440, 39)
+        Me.grpExperience.Name = "grpExperience"
+        Me.grpExperience.Size = New System.Drawing.Size(152, 84)
+        Me.grpExperience.TabIndex = 21
+        Me.grpExperience.TabStop = False
+        Me.grpExperience.Text = "Experience"
         '
-        'cboTypeOfLife
+        'btnSearchDiet
         '
-        Me.cboTypeOfLife.BackColor = System.Drawing.SystemColors.Window
-        Me.cboTypeOfLife.FormattingEnabled = True
-        Me.cboTypeOfLife.Location = New System.Drawing.Point(148, 40)
-        Me.cboTypeOfLife.Name = "cboTypeOfLife"
-        Me.cboTypeOfLife.Size = New System.Drawing.Size(122, 21)
-        Me.cboTypeOfLife.TabIndex = 5
+        Me.btnSearchDiet.Location = New System.Drawing.Point(35, 48)
+        Me.btnSearchDiet.Name = "btnSearchDiet"
+        Me.btnSearchDiet.Size = New System.Drawing.Size(75, 23)
+        Me.btnSearchDiet.TabIndex = 22
+        Me.btnSearchDiet.Text = "Search"
+        Me.btnSearchDiet.UseVisualStyleBackColor = True
         '
-        'cboSeason
+        'grpFoodDiet
         '
-        Me.cboSeason.BackColor = System.Drawing.SystemColors.Window
-        Me.cboSeason.FormattingEnabled = True
-        Me.cboSeason.Location = New System.Drawing.Point(381, 40)
-        Me.cboSeason.Name = "cboSeason"
-        Me.cboSeason.Size = New System.Drawing.Size(122, 21)
-        Me.cboSeason.TabIndex = 6
+        Me.grpFoodDiet.Controls.Add(Me.btnSearchDiet)
+        Me.grpFoodDiet.Controls.Add(Me.cboFoodDiet)
+        Me.grpFoodDiet.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.grpFoodDiet.Location = New System.Drawing.Point(623, 41)
+        Me.grpFoodDiet.Name = "grpFoodDiet"
+        Me.grpFoodDiet.Size = New System.Drawing.Size(147, 81)
+        Me.grpFoodDiet.TabIndex = 23
+        Me.grpFoodDiet.TabStop = False
+        Me.grpFoodDiet.Text = "Food Diet"
         '
-        'Label1
+        'btnSearchSeason
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(28, 41)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(114, 15)
-        Me.Label1.TabIndex = 7
-        Me.Label1.Text = "Type of Marine Life:"
+        Me.btnSearchSeason.Location = New System.Drawing.Point(38, 48)
+        Me.btnSearchSeason.Name = "btnSearchSeason"
+        Me.btnSearchSeason.Size = New System.Drawing.Size(75, 23)
+        Me.btnSearchSeason.TabIndex = 23
+        Me.btnSearchSeason.Text = "Search"
+        Me.btnSearchSeason.UseVisualStyleBackColor = True
         '
-        'Label2
+        'btnSearchMarineLife
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(323, 41)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(52, 15)
-        Me.Label2.TabIndex = 8
-        Me.Label2.Text = "Season:"
+        Me.btnSearchMarineLife.Location = New System.Drawing.Point(33, 50)
+        Me.btnSearchMarineLife.Name = "btnSearchMarineLife"
+        Me.btnSearchMarineLife.Size = New System.Drawing.Size(75, 23)
+        Me.btnSearchMarineLife.TabIndex = 24
+        Me.btnSearchMarineLife.Text = "Search"
+        Me.btnSearchMarineLife.UseVisualStyleBackColor = True
         '
-        'btnWishlist
+        'grpSeason
         '
-        Me.btnWishlist.Location = New System.Drawing.Point(577, 38)
-        Me.btnWishlist.Name = "btnWishlist"
-        Me.btnWishlist.Size = New System.Drawing.Size(100, 23)
-        Me.btnWishlist.TabIndex = 9
-        Me.btnWishlist.Text = "Add to Wishlist"
-        Me.btnWishlist.UseVisualStyleBackColor = True
+        Me.grpSeason.Controls.Add(Me.btnSearchSeason)
+        Me.grpSeason.Controls.Add(Me.cboSeason)
+        Me.grpSeason.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.grpSeason.Location = New System.Drawing.Point(253, 41)
+        Me.grpSeason.Name = "grpSeason"
+        Me.grpSeason.Size = New System.Drawing.Size(150, 81)
+        Me.grpSeason.TabIndex = 25
+        Me.grpSeason.TabStop = False
+        Me.grpSeason.Text = "Season"
         '
-        'ProductTableTableAdapter
+        'grpMarineLife
         '
-        Me.ProductTableTableAdapter.ClearBeforeFill = True
-        '
-        'Label3
-        '
-        Me.Label3.BackColor = System.Drawing.SystemColors.Info
-        Me.Label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(21, 412)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(434, 46)
-        Me.Label3.TabIndex = 10
-        Me.Label3.Text = "Su -Summer,  Sp -Spring,  W -Winter,  SS - Spring/Summer,  FW -Fall/Winter,  SSF " &
-    "- Spring/Summer/Fall,  SSFW -Spring/Summer/Fall/Winter"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.SystemColors.InactiveCaptionText
-        Me.Label4.Location = New System.Drawing.Point(18, 392)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(57, 16)
-        Me.Label4.TabIndex = 11
-        Me.Label4.Text = "Legend:"
-        '
-        'ToolStrip1
-        '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnExit, Me.btnAll, Me.ToolStripLabel1, Me.cboRetailer, Me.ToolStripLabel2, Me.cboExperienceLvl, Me.ToolStripLabel3, Me.cboDiet})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(818, 25)
-        Me.ToolStrip1.TabIndex = 12
-        Me.ToolStrip1.Text = "ToolStrip1"
-        '
-        'btnExit
-        '
-        Me.btnExit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.btnExit.Image = CType(resources.GetObject("btnExit.Image"), System.Drawing.Image)
-        Me.btnExit.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(29, 22)
-        Me.btnExit.Text = "Exit"
-        '
-        'btnAll
-        '
-        Me.btnAll.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.btnAll.Image = CType(resources.GetObject("btnAll.Image"), System.Drawing.Image)
-        Me.btnAll.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnAll.Name = "btnAll"
-        Me.btnAll.Size = New System.Drawing.Size(25, 22)
-        Me.btnAll.Text = "All"
-        '
-        'ToolStripLabel1
-        '
-        Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(93, 22)
-        Me.ToolStripLabel1.Text = "Specific Retailer:"
-        '
-        'cboRetailer
-        '
-        Me.cboRetailer.Name = "cboRetailer"
-        Me.cboRetailer.Size = New System.Drawing.Size(121, 25)
-        '
-        'ToolStripLabel2
-        '
-        Me.ToolStripLabel2.Name = "ToolStripLabel2"
-        Me.ToolStripLabel2.Size = New System.Drawing.Size(96, 22)
-        Me.ToolStripLabel2.Text = "Experience Level:"
-        '
-        'cboExperienceLvl
-        '
-        Me.cboExperienceLvl.Name = "cboExperienceLvl"
-        Me.cboExperienceLvl.Size = New System.Drawing.Size(121, 25)
-        '
-        'ToolStripLabel3
-        '
-        Me.ToolStripLabel3.Name = "ToolStripLabel3"
-        Me.ToolStripLabel3.Size = New System.Drawing.Size(61, 22)
-        Me.ToolStripLabel3.Text = "Food Diet:"
-        '
-        'cboDiet
-        '
-        Me.cboDiet.Name = "cboDiet"
-        Me.cboDiet.Size = New System.Drawing.Size(121, 25)
+        Me.grpMarineLife.Controls.Add(Me.btnSearchMarineLife)
+        Me.grpMarineLife.Controls.Add(Me.cboTypeOfLife)
+        Me.grpMarineLife.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.grpMarineLife.Location = New System.Drawing.Point(63, 41)
+        Me.grpMarineLife.Name = "grpMarineLife"
+        Me.grpMarineLife.Size = New System.Drawing.Size(145, 83)
+        Me.grpMarineLife.TabIndex = 26
+        Me.grpMarineLife.TabStop = False
+        Me.grpMarineLife.Text = "Type of Marine Life"
         '
         'frmViewAllProducts
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(818, 473)
+        Me.ClientSize = New System.Drawing.Size(895, 545)
+        Me.Controls.Add(Me.grpMarineLife)
+        Me.Controls.Add(Me.grpSeason)
+        Me.Controls.Add(Me.grpFoodDiet)
+        Me.Controls.Add(Me.grpExperience)
+        Me.Controls.Add(Me.Legend)
         Me.Controls.Add(Me.ToolStrip1)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.btnWishlist)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.cboSeason)
-        Me.Controls.Add(Me.cboTypeOfLife)
         Me.Controls.Add(Me.dgvAllProducts)
         Me.Name = "frmViewAllProducts"
         Me.Text = "View All Products"
         CType(Me.dgvAllProducts, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ProductTableBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CALSdatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
+        CType(Me.ProductTableBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CALSdatabaseDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CALSdatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Legend.ResumeLayout(False)
+        Me.grpExperience.ResumeLayout(False)
+        Me.grpFoodDiet.ResumeLayout(False)
+        Me.grpSeason.ResumeLayout(False)
+        Me.grpMarineLife.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -298,12 +372,20 @@ Partial Class frmViewAllProducts
     Friend WithEvents dgvAllProducts As DataGridView
     Friend WithEvents cboTypeOfLife As ComboBox
     Friend WithEvents cboSeason As ComboBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents btnWishlist As Button
     Friend WithEvents CALSdatabaseDataSet As CALSdatabaseDataSet
+    Friend WithEvents Label3 As Label
+    Friend WithEvents ToolStrip1 As ToolStrip
+    Friend WithEvents ToolStripLabel1 As ToolStripLabel
+    Friend WithEvents cboRetailer As ToolStripComboBox
+    Friend WithEvents btnExit As ToolStripButton
+    Friend WithEvents btnAll As ToolStripButton
+    Friend WithEvents btnAddToWishlist As ToolStripButton
+    Friend WithEvents cboFoodDiet As ComboBox
+    Friend WithEvents btnSearch As Button
+    Friend WithEvents CALSdatabaseDataSet1 As CALSdatabaseDataSet
     Friend WithEvents ProductTableBindingSource As BindingSource
     Friend WithEvents ProductTableTableAdapter As CALSdatabaseDataSetTableAdapters.ProductTableTableAdapter
+    Friend WithEvents cboExperience As ComboBox
     Friend WithEvents ProductNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents MarineTypeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ExperienceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -311,15 +393,12 @@ Partial Class frmViewAllProducts
     Friend WithEvents FoodDietDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents RetailerNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PriceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents ToolStrip1 As ToolStrip
-    Friend WithEvents ToolStripLabel1 As ToolStripLabel
-    Friend WithEvents cboRetailer As ToolStripComboBox
-    Friend WithEvents ToolStripLabel2 As ToolStripLabel
-    Friend WithEvents cboExperienceLvl As ToolStripComboBox
-    Friend WithEvents ToolStripLabel3 As ToolStripLabel
-    Friend WithEvents cboDiet As ToolStripComboBox
-    Friend WithEvents btnExit As ToolStripButton
-    Friend WithEvents btnAll As ToolStripButton
+    Friend WithEvents Legend As GroupBox
+    Friend WithEvents grpExperience As GroupBox
+    Friend WithEvents btnSearchDiet As Button
+    Friend WithEvents grpFoodDiet As GroupBox
+    Friend WithEvents btnSearchSeason As Button
+    Friend WithEvents btnSearchMarineLife As Button
+    Friend WithEvents grpSeason As GroupBox
+    Friend WithEvents grpMarineLife As GroupBox
 End Class
