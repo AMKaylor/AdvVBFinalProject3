@@ -90,12 +90,12 @@ Public Class frmProductPriceComparison
 
     Private Sub btnCompare_Click(sender As Object, e As EventArgs) Handles btnCompare.Click
 
-        Dim total As Double
-        Dim compared1 As Double
-        Dim compared2 As Double
+        Dim total As Decimal
+        Dim compared1 As Decimal
+        Dim compared2 As Decimal
 
-        compared1 = mProducts.GetDataByComparedPrice(cboComparedItem.SelectedIndex)
-        compared2 = mProducts.GetDataByComparedPrice(cboComparedItem2.SelectedIndex)
+        'compared1 = mProducts.GetDataByComparedPrice(cboComparedItem.SelectedIndex)
+        'compared2 = mProducts.GetDataByComparedPrice(cboComparedItem2.SelectedIndex)
 
         total = compared1 - compared2
 
