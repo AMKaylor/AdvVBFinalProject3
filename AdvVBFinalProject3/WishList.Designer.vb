@@ -22,86 +22,48 @@ Partial Class frmWishList
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SelectAProductToAddToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.cboProductWish = New System.Windows.Forms.ToolStripComboBox()
-        Me.SelectAProductToRemoveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.cboProductRemove = New System.Windows.Forms.ToolStripComboBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.lblStatus = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.dgvWishList = New System.Windows.Forms.DataGridView()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.btnAdd = New System.Windows.Forms.Button()
-        Me.btnRemove = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.cboRetailer = New System.Windows.Forms.ComboBox()
+        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.btnDelete = New System.Windows.Forms.Button()
+        Me.WishlistTableBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CALSdatabaseDataSet = New AdvVBFinalProject3.CALSdatabaseDataSet()
+        Me.WishlistTableTableAdapter = New AdvVBFinalProject3.CALSdatabaseDataSetTableAdapters.WishlistTableTableAdapter()
+        Me.ProductIdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProductNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MarineTypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ExperienceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SeasonDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FoodDietDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RetailerNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        CType(Me.dgvWishList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.StatusStrip1.SuspendLayout()
+        CType(Me.WishlistTableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CALSdatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'MenuStrip1
+        'dgvWishList
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.SelectAProductToAddToolStripMenuItem, Me.cboProductWish, Me.SelectAProductToRemoveToolStripMenuItem, Me.cboProductRemove})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(629, 27)
-        Me.MenuStrip1.TabIndex = 0
-        Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'FileToolStripMenuItem
-        '
-        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 23)
-        Me.FileToolStripMenuItem.Text = "Exit"
-        '
-        'SelectAProductToAddToolStripMenuItem
-        '
-        Me.SelectAProductToAddToolStripMenuItem.Name = "SelectAProductToAddToolStripMenuItem"
-        Me.SelectAProductToAddToolStripMenuItem.Size = New System.Drawing.Size(146, 23)
-        Me.SelectAProductToAddToolStripMenuItem.Text = "Select a Product to Add:"
-        '
-        'cboProductWish
-        '
-        Me.cboProductWish.Name = "cboProductWish"
-        Me.cboProductWish.Size = New System.Drawing.Size(121, 23)
-        '
-        'SelectAProductToRemoveToolStripMenuItem
-        '
-        Me.SelectAProductToRemoveToolStripMenuItem.Name = "SelectAProductToRemoveToolStripMenuItem"
-        Me.SelectAProductToRemoveToolStripMenuItem.Size = New System.Drawing.Size(167, 23)
-        Me.SelectAProductToRemoveToolStripMenuItem.Text = "Select a Product to Remove:"
-        '
-        'cboProductRemove
-        '
-        Me.cboProductRemove.Name = "cboProductRemove"
-        Me.cboProductRemove.Size = New System.Drawing.Size(121, 23)
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Control
-        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 74)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(605, 306)
-        Me.DataGridView1.TabIndex = 1
-        '
-        'StatusStrip1
-        '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblStatus})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 418)
-        Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(629, 22)
-        Me.StatusStrip1.TabIndex = 2
-        Me.StatusStrip1.Text = "StatusStrip1"
-        '
-        'lblStatus
-        '
-        Me.lblStatus.Name = "lblStatus"
-        Me.lblStatus.Size = New System.Drawing.Size(0, 17)
+        Me.dgvWishList.AllowUserToAddRows = False
+        Me.dgvWishList.AllowUserToDeleteRows = False
+        Me.dgvWishList.AutoGenerateColumns = False
+        Me.dgvWishList.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.dgvWishList.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgvWishList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.dgvWishList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvWishList.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ProductIdDataGridViewTextBoxColumn, Me.ProductNameDataGridViewTextBoxColumn, Me.MarineTypeDataGridViewTextBoxColumn, Me.ExperienceDataGridViewTextBoxColumn, Me.SeasonDataGridViewTextBoxColumn, Me.FoodDietDataGridViewTextBoxColumn, Me.RetailerNameDataGridViewTextBoxColumn, Me.PriceDataGridViewTextBoxColumn})
+        Me.dgvWishList.DataSource = Me.WishlistTableBindingSource
+        Me.dgvWishList.Location = New System.Drawing.Point(12, 63)
+        Me.dgvWishList.Name = "dgvWishList"
+        Me.dgvWishList.ReadOnly = True
+        Me.dgvWishList.Size = New System.Drawing.Size(845, 306)
+        Me.dgvWishList.TabIndex = 1
         '
         'Label1
         '
@@ -113,32 +75,6 @@ Partial Class frmWishList
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Select a Retailer:"
         '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(190, 36)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 4
-        '
-        'btnAdd
-        '
-        Me.btnAdd.Location = New System.Drawing.Point(110, 387)
-        Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(96, 23)
-        Me.btnAdd.TabIndex = 5
-        Me.btnAdd.Text = "Add"
-        Me.btnAdd.UseVisualStyleBackColor = True
-        '
-        'btnRemove
-        '
-        Me.btnRemove.Location = New System.Drawing.Point(367, 387)
-        Me.btnRemove.Name = "btnRemove"
-        Me.btnRemove.Size = New System.Drawing.Size(96, 23)
-        Me.btnRemove.TabIndex = 6
-        Me.btnRemove.Text = "Remove"
-        Me.btnRemove.UseVisualStyleBackColor = True
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -147,44 +83,150 @@ Partial Class frmWishList
         Me.Label2.Size = New System.Drawing.Size(0, 13)
         Me.Label2.TabIndex = 7
         '
+        'cboRetailer
+        '
+        Me.cboRetailer.FormattingEnabled = True
+        Me.cboRetailer.Location = New System.Drawing.Point(190, 36)
+        Me.cboRetailer.Name = "cboRetailer"
+        Me.cboRetailer.Size = New System.Drawing.Size(121, 21)
+        Me.cboRetailer.TabIndex = 4
+        '
+        'FileToolStripMenuItem
+        '
+        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
+        Me.FileToolStripMenuItem.Text = "Exit"
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(872, 24)
+        Me.MenuStrip1.TabIndex = 0
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'btnDelete
+        '
+        Me.btnDelete.Location = New System.Drawing.Point(373, 32)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(94, 23)
+        Me.btnDelete.TabIndex = 8
+        Me.btnDelete.Text = "Delete"
+        Me.btnDelete.UseVisualStyleBackColor = True
+        '
+        'WishlistTableBindingSource
+        '
+        Me.WishlistTableBindingSource.DataMember = "WishlistTable"
+        Me.WishlistTableBindingSource.DataSource = Me.CALSdatabaseDataSet
+        '
+        'CALSdatabaseDataSet
+        '
+        Me.CALSdatabaseDataSet.DataSetName = "CALSdatabaseDataSet"
+        Me.CALSdatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'WishlistTableTableAdapter
+        '
+        Me.WishlistTableTableAdapter.ClearBeforeFill = True
+        '
+        'ProductIdDataGridViewTextBoxColumn
+        '
+        Me.ProductIdDataGridViewTextBoxColumn.DataPropertyName = "ProductId"
+        Me.ProductIdDataGridViewTextBoxColumn.HeaderText = "ProductId"
+        Me.ProductIdDataGridViewTextBoxColumn.Name = "ProductIdDataGridViewTextBoxColumn"
+        Me.ProductIdDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ProductNameDataGridViewTextBoxColumn
+        '
+        Me.ProductNameDataGridViewTextBoxColumn.DataPropertyName = "Product_Name"
+        Me.ProductNameDataGridViewTextBoxColumn.HeaderText = "Product_Name"
+        Me.ProductNameDataGridViewTextBoxColumn.Name = "ProductNameDataGridViewTextBoxColumn"
+        Me.ProductNameDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'MarineTypeDataGridViewTextBoxColumn
+        '
+        Me.MarineTypeDataGridViewTextBoxColumn.DataPropertyName = "Marine_Type"
+        Me.MarineTypeDataGridViewTextBoxColumn.HeaderText = "Marine_Type"
+        Me.MarineTypeDataGridViewTextBoxColumn.Name = "MarineTypeDataGridViewTextBoxColumn"
+        Me.MarineTypeDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ExperienceDataGridViewTextBoxColumn
+        '
+        Me.ExperienceDataGridViewTextBoxColumn.DataPropertyName = "Experience"
+        Me.ExperienceDataGridViewTextBoxColumn.HeaderText = "Experience"
+        Me.ExperienceDataGridViewTextBoxColumn.Name = "ExperienceDataGridViewTextBoxColumn"
+        Me.ExperienceDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'SeasonDataGridViewTextBoxColumn
+        '
+        Me.SeasonDataGridViewTextBoxColumn.DataPropertyName = "Season"
+        Me.SeasonDataGridViewTextBoxColumn.HeaderText = "Season"
+        Me.SeasonDataGridViewTextBoxColumn.Name = "SeasonDataGridViewTextBoxColumn"
+        Me.SeasonDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'FoodDietDataGridViewTextBoxColumn
+        '
+        Me.FoodDietDataGridViewTextBoxColumn.DataPropertyName = "Food_Diet"
+        Me.FoodDietDataGridViewTextBoxColumn.HeaderText = "Food_Diet"
+        Me.FoodDietDataGridViewTextBoxColumn.Name = "FoodDietDataGridViewTextBoxColumn"
+        Me.FoodDietDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'RetailerNameDataGridViewTextBoxColumn
+        '
+        Me.RetailerNameDataGridViewTextBoxColumn.DataPropertyName = "Retailer_Name"
+        Me.RetailerNameDataGridViewTextBoxColumn.HeaderText = "Retailer_Name"
+        Me.RetailerNameDataGridViewTextBoxColumn.Name = "RetailerNameDataGridViewTextBoxColumn"
+        Me.RetailerNameDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'PriceDataGridViewTextBoxColumn
+        '
+        Me.PriceDataGridViewTextBoxColumn.DataPropertyName = "Price"
+        DataGridViewCellStyle1.Format = "C2"
+        DataGridViewCellStyle1.NullValue = Nothing
+        Me.PriceDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle1
+        Me.PriceDataGridViewTextBoxColumn.HeaderText = "Price"
+        Me.PriceDataGridViewTextBoxColumn.Name = "PriceDataGridViewTextBoxColumn"
+        Me.PriceDataGridViewTextBoxColumn.ReadOnly = True
+        '
         'frmWishList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(629, 440)
+        Me.ClientSize = New System.Drawing.Size(872, 400)
+        Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.btnRemove)
-        Me.Controls.Add(Me.btnAdd)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cboRetailer)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.StatusStrip1)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.dgvWishList)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmWishList"
         Me.Text = "Wish List"
+        CType(Me.dgvWishList, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.StatusStrip1.ResumeLayout(False)
-        Me.StatusStrip1.PerformLayout()
+        CType(Me.WishlistTableBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CALSdatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents SelectAProductToAddToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents cboProductWish As ToolStripComboBox
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents StatusStrip1 As StatusStrip
-    Friend WithEvents lblStatus As ToolStripStatusLabel
-    Friend WithEvents SelectAProductToRemoveToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents cboProductRemove As ToolStripComboBox
+    Friend WithEvents dgvWishList As DataGridView
     Friend WithEvents Label1 As Label
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents btnAdd As Button
-    Friend WithEvents btnRemove As Button
     Friend WithEvents Label2 As Label
+    Friend WithEvents CALSdatabaseDataSet As CALSdatabaseDataSet
+    Friend WithEvents WishlistTableBindingSource As BindingSource
+    Friend WithEvents WishlistTableTableAdapter As CALSdatabaseDataSetTableAdapters.WishlistTableTableAdapter
+    Friend WithEvents cboRetailer As ComboBox
+    Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents btnDelete As Button
+    Friend WithEvents ProductIdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ProductNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents MarineTypeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ExperienceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SeasonDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents FoodDietDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents RetailerNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PriceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

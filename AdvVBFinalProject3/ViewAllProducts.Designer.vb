@@ -23,9 +23,17 @@ Partial Class frmViewAllProducts
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmViewAllProducts))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmViewAllProducts))
         Me.dgvAllProducts = New System.Windows.Forms.DataGridView()
+        Me.ProductId = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProductNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MarineTypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ExperienceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SeasonDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FoodDietDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RetailerNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ProductTableBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CALSdatabaseDataSet1 = New AdvVBFinalProject3.CALSdatabaseDataSet()
         Me.cboTypeOfLife = New System.Windows.Forms.ComboBox()
@@ -36,7 +44,6 @@ Partial Class frmViewAllProducts
         Me.btnAll = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.cboRetailer = New System.Windows.Forms.ToolStripComboBox()
-        Me.btnAddToWishlist = New System.Windows.Forms.ToolStripButton()
         Me.cboFoodDiet = New System.Windows.Forms.ComboBox()
         Me.btnSearch = New System.Windows.Forms.Button()
         Me.cboExperience = New System.Windows.Forms.ComboBox()
@@ -50,13 +57,7 @@ Partial Class frmViewAllProducts
         Me.grpMarineLife = New System.Windows.Forms.GroupBox()
         Me.CALSdatabaseDataSet = New AdvVBFinalProject3.CALSdatabaseDataSet()
         Me.ProductTableTableAdapter = New AdvVBFinalProject3.CALSdatabaseDataSetTableAdapters.ProductTableTableAdapter()
-        Me.ProductNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MarineTypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ExperienceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SeasonDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FoodDietDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.RetailerNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btnAdd = New System.Windows.Forms.Button()
         CType(Me.dgvAllProducts, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProductTableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CALSdatabaseDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -77,13 +78,72 @@ Partial Class frmViewAllProducts
         Me.dgvAllProducts.BackgroundColor = System.Drawing.SystemColors.ButtonFace
         Me.dgvAllProducts.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvAllProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvAllProducts.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ProductNameDataGridViewTextBoxColumn, Me.MarineTypeDataGridViewTextBoxColumn, Me.ExperienceDataGridViewTextBoxColumn, Me.SeasonDataGridViewTextBoxColumn, Me.FoodDietDataGridViewTextBoxColumn, Me.RetailerNameDataGridViewTextBoxColumn, Me.PriceDataGridViewTextBoxColumn})
+        Me.dgvAllProducts.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ProductId, Me.ProductNameDataGridViewTextBoxColumn, Me.MarineTypeDataGridViewTextBoxColumn, Me.ExperienceDataGridViewTextBoxColumn, Me.SeasonDataGridViewTextBoxColumn, Me.FoodDietDataGridViewTextBoxColumn, Me.RetailerNameDataGridViewTextBoxColumn, Me.PriceDataGridViewTextBoxColumn})
         Me.dgvAllProducts.DataSource = Me.ProductTableBindingSource
-        Me.dgvAllProducts.Location = New System.Drawing.Point(43, 149)
+        Me.dgvAllProducts.Location = New System.Drawing.Point(22, 148)
         Me.dgvAllProducts.Name = "dgvAllProducts"
         Me.dgvAllProducts.ReadOnly = True
-        Me.dgvAllProducts.Size = New System.Drawing.Size(783, 289)
+        Me.dgvAllProducts.Size = New System.Drawing.Size(842, 289)
         Me.dgvAllProducts.TabIndex = 1
+        '
+        'ProductId
+        '
+        Me.ProductId.DataPropertyName = "ProductId"
+        Me.ProductId.HeaderText = "ProductId"
+        Me.ProductId.Name = "ProductId"
+        Me.ProductId.ReadOnly = True
+        '
+        'ProductNameDataGridViewTextBoxColumn
+        '
+        Me.ProductNameDataGridViewTextBoxColumn.DataPropertyName = "Product_Name"
+        Me.ProductNameDataGridViewTextBoxColumn.HeaderText = "Product_Name"
+        Me.ProductNameDataGridViewTextBoxColumn.Name = "ProductNameDataGridViewTextBoxColumn"
+        Me.ProductNameDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'MarineTypeDataGridViewTextBoxColumn
+        '
+        Me.MarineTypeDataGridViewTextBoxColumn.DataPropertyName = "Marine_Type"
+        Me.MarineTypeDataGridViewTextBoxColumn.HeaderText = "Marine_Type"
+        Me.MarineTypeDataGridViewTextBoxColumn.Name = "MarineTypeDataGridViewTextBoxColumn"
+        Me.MarineTypeDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ExperienceDataGridViewTextBoxColumn
+        '
+        Me.ExperienceDataGridViewTextBoxColumn.DataPropertyName = "Experience"
+        Me.ExperienceDataGridViewTextBoxColumn.HeaderText = "Experience"
+        Me.ExperienceDataGridViewTextBoxColumn.Name = "ExperienceDataGridViewTextBoxColumn"
+        Me.ExperienceDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'SeasonDataGridViewTextBoxColumn
+        '
+        Me.SeasonDataGridViewTextBoxColumn.DataPropertyName = "Season"
+        Me.SeasonDataGridViewTextBoxColumn.HeaderText = "Season"
+        Me.SeasonDataGridViewTextBoxColumn.Name = "SeasonDataGridViewTextBoxColumn"
+        Me.SeasonDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'FoodDietDataGridViewTextBoxColumn
+        '
+        Me.FoodDietDataGridViewTextBoxColumn.DataPropertyName = "Food_Diet"
+        Me.FoodDietDataGridViewTextBoxColumn.HeaderText = "Food_Diet"
+        Me.FoodDietDataGridViewTextBoxColumn.Name = "FoodDietDataGridViewTextBoxColumn"
+        Me.FoodDietDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'RetailerNameDataGridViewTextBoxColumn
+        '
+        Me.RetailerNameDataGridViewTextBoxColumn.DataPropertyName = "Retailer_Name"
+        Me.RetailerNameDataGridViewTextBoxColumn.HeaderText = "Retailer_Name"
+        Me.RetailerNameDataGridViewTextBoxColumn.Name = "RetailerNameDataGridViewTextBoxColumn"
+        Me.RetailerNameDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'PriceDataGridViewTextBoxColumn
+        '
+        Me.PriceDataGridViewTextBoxColumn.DataPropertyName = "Price"
+        DataGridViewCellStyle1.Format = "C2"
+        DataGridViewCellStyle1.NullValue = Nothing
+        Me.PriceDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle1
+        Me.PriceDataGridViewTextBoxColumn.HeaderText = "Price"
+        Me.PriceDataGridViewTextBoxColumn.Name = "PriceDataGridViewTextBoxColumn"
+        Me.PriceDataGridViewTextBoxColumn.ReadOnly = True
         '
         'ProductTableBindingSource
         '
@@ -127,7 +187,7 @@ Partial Class frmViewAllProducts
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnExit, Me.btnAll, Me.ToolStripLabel1, Me.cboRetailer, Me.btnAddToWishlist})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnExit, Me.btnAll, Me.ToolStripLabel1, Me.cboRetailer})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(895, 25)
@@ -162,15 +222,6 @@ Partial Class frmViewAllProducts
         '
         Me.cboRetailer.Name = "cboRetailer"
         Me.cboRetailer.Size = New System.Drawing.Size(121, 25)
-        '
-        'btnAddToWishlist
-        '
-        Me.btnAddToWishlist.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.btnAddToWishlist.Image = CType(resources.GetObject("btnAddToWishlist.Image"), System.Drawing.Image)
-        Me.btnAddToWishlist.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnAddToWishlist.Name = "btnAddToWishlist"
-        Me.btnAddToWishlist.Size = New System.Drawing.Size(91, 22)
-        Me.btnAddToWishlist.Text = "Add to Wishlist"
         '
         'cboFoodDiet
         '
@@ -292,63 +343,21 @@ Partial Class frmViewAllProducts
         '
         Me.ProductTableTableAdapter.ClearBeforeFill = True
         '
-        'ProductNameDataGridViewTextBoxColumn
+        'btnAdd
         '
-        Me.ProductNameDataGridViewTextBoxColumn.DataPropertyName = "Product_Name"
-        Me.ProductNameDataGridViewTextBoxColumn.HeaderText = "Product_Name"
-        Me.ProductNameDataGridViewTextBoxColumn.Name = "ProductNameDataGridViewTextBoxColumn"
-        Me.ProductNameDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'MarineTypeDataGridViewTextBoxColumn
-        '
-        Me.MarineTypeDataGridViewTextBoxColumn.DataPropertyName = "Marine_Type"
-        Me.MarineTypeDataGridViewTextBoxColumn.HeaderText = "Marine_Type"
-        Me.MarineTypeDataGridViewTextBoxColumn.Name = "MarineTypeDataGridViewTextBoxColumn"
-        Me.MarineTypeDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'ExperienceDataGridViewTextBoxColumn
-        '
-        Me.ExperienceDataGridViewTextBoxColumn.DataPropertyName = "Experience"
-        Me.ExperienceDataGridViewTextBoxColumn.HeaderText = "Experience"
-        Me.ExperienceDataGridViewTextBoxColumn.Name = "ExperienceDataGridViewTextBoxColumn"
-        Me.ExperienceDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'SeasonDataGridViewTextBoxColumn
-        '
-        Me.SeasonDataGridViewTextBoxColumn.DataPropertyName = "Season"
-        Me.SeasonDataGridViewTextBoxColumn.HeaderText = "Season"
-        Me.SeasonDataGridViewTextBoxColumn.Name = "SeasonDataGridViewTextBoxColumn"
-        Me.SeasonDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'FoodDietDataGridViewTextBoxColumn
-        '
-        Me.FoodDietDataGridViewTextBoxColumn.DataPropertyName = "Food_Diet"
-        Me.FoodDietDataGridViewTextBoxColumn.HeaderText = "Food_Diet"
-        Me.FoodDietDataGridViewTextBoxColumn.Name = "FoodDietDataGridViewTextBoxColumn"
-        Me.FoodDietDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'RetailerNameDataGridViewTextBoxColumn
-        '
-        Me.RetailerNameDataGridViewTextBoxColumn.DataPropertyName = "Retailer_Name"
-        Me.RetailerNameDataGridViewTextBoxColumn.HeaderText = "Retailer_Name"
-        Me.RetailerNameDataGridViewTextBoxColumn.Name = "RetailerNameDataGridViewTextBoxColumn"
-        Me.RetailerNameDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'PriceDataGridViewTextBoxColumn
-        '
-        Me.PriceDataGridViewTextBoxColumn.DataPropertyName = "Price"
-        DataGridViewCellStyle1.Format = "C2"
-        DataGridViewCellStyle1.NullValue = Nothing
-        Me.PriceDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle1
-        Me.PriceDataGridViewTextBoxColumn.HeaderText = "Price"
-        Me.PriceDataGridViewTextBoxColumn.Name = "PriceDataGridViewTextBoxColumn"
-        Me.PriceDataGridViewTextBoxColumn.ReadOnly = True
+        Me.btnAdd.Location = New System.Drawing.Point(477, 456)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(99, 77)
+        Me.btnAdd.TabIndex = 27
+        Me.btnAdd.Text = "ADD TO WISHLIST"
+        Me.btnAdd.UseVisualStyleBackColor = True
         '
         'frmViewAllProducts
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(895, 545)
+        Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.grpMarineLife)
         Me.Controls.Add(Me.grpSeason)
         Me.Controls.Add(Me.grpFoodDiet)
@@ -383,7 +392,6 @@ Partial Class frmViewAllProducts
     Friend WithEvents cboRetailer As ToolStripComboBox
     Friend WithEvents btnExit As ToolStripButton
     Friend WithEvents btnAll As ToolStripButton
-    Friend WithEvents btnAddToWishlist As ToolStripButton
     Friend WithEvents cboFoodDiet As ComboBox
     Friend WithEvents btnSearch As Button
     Friend WithEvents CALSdatabaseDataSet1 As CALSdatabaseDataSet
@@ -398,6 +406,7 @@ Partial Class frmViewAllProducts
     Friend WithEvents btnSearchMarineLife As Button
     Friend WithEvents grpSeason As GroupBox
     Friend WithEvents grpMarineLife As GroupBox
+    Friend WithEvents ProductId As DataGridViewTextBoxColumn
     Friend WithEvents ProductNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents MarineTypeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ExperienceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -405,4 +414,5 @@ Partial Class frmViewAllProducts
     Friend WithEvents FoodDietDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents RetailerNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PriceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents btnAdd As Button
 End Class

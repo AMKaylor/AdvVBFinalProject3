@@ -4,6 +4,7 @@ Option Strict On
 Public Class frmViewAllProducts
     Private mRetailer As New Retailer
     Private mProducts As New Products
+    Private mWishList As New Wish_List
     Private formLoading As Boolean = True
 
     Private Sub frmViewAllProducts_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -142,6 +143,27 @@ Public Class frmViewAllProducts
     Private Sub btnAll_Click(sender As Object, e As EventArgs) Handles btnAll.Click
 
         dgvAllProducts.DataSource = mProducts.Items()
+
+    End Sub
+
+    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+
+
+        If dgvAllProducts.SelectedRows.Count > 0 Then
+
+            Dim ProductId As Short = CShort(dgvAllProducts.SelectedRows(0).Cells(0).Value)
+            Dim adapter As New CALSdatabaseDataSetTableAdapters.WishlistTableTableAdapter
+
+            If CBool(adapter.InsertQueryToWishlist(ProductId)) Then
+
+                MessageBox.Show("Product added to Wishlist.")
+
+            Else
+
+                MessageBox.Show("Unable to add Product.")
+
+            End If
+        End If
 
     End Sub
 End Class

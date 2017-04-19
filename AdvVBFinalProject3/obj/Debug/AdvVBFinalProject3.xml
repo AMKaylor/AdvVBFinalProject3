@@ -42,11 +42,6 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:AdvVBFinalProject3.CALSdatabaseDataSet.MemberTableDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
 <member name="T:AdvVBFinalProject3.CALSdatabaseDataSet.RetailerTableRow">
 <summary>
 Represents strongly named DataRow class.
@@ -58,11 +53,6 @@ Represents strongly named DataRow class.
 </summary>
 </member>
 <member name="T:AdvVBFinalProject3.CALSdatabaseDataSet.WishlistTableRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:AdvVBFinalProject3.CALSdatabaseDataSet.MemberTableRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -82,11 +72,6 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
-<member name="T:AdvVBFinalProject3.CALSdatabaseDataSet.MemberTableRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
 <member name="T:AdvVBFinalProject3.CALSdatabaseDataSetTableAdapters.RetailerTableTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
@@ -98,11 +83,6 @@ Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
 <member name="T:AdvVBFinalProject3.CALSdatabaseDataSetTableAdapters.WishlistTableTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:AdvVBFinalProject3.CALSdatabaseDataSetTableAdapters.MemberTableTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
