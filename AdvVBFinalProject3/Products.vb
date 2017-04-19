@@ -187,4 +187,23 @@
         End Try
     End Function
 
+    Public Function GetDataByRetailerForComparison(ByVal pRetailerId As Integer) As DataTable
+
+        Try
+            Dim table As DataTable = adapter.GetDataByRetailerForComparison(pRetailerId)
+            Return table
+        Catch ex As Exception
+
+        End Try
+    End Function
+
+    Public Function GetDataByComparedPrice(ByVal pProductId As Integer) As DataTable
+
+        Try
+            Dim table As DataTable = adapter.GetDataByComparedPrice(pProductId)
+            Return table
+        Catch ex As Exception
+
+        End Try
+    End Function
 End Class

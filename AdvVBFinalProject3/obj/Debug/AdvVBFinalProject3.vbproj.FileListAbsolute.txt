@@ -8,7 +8,6 @@ C:\Users\alex_\Desktop\AdvVBFinalProject3\AdvVBFinalProject3\obj\Debug\AdvVBFina
 C:\Users\alex_\Desktop\AdvVBFinalProject3\AdvVBFinalProject3\obj\Debug\AdvVBFinalProject3.frmProductPriceComparison.resources
 C:\Users\alex_\Desktop\AdvVBFinalProject3\AdvVBFinalProject3\obj\Debug\AdvVBFinalProject3.frmRetailerList.resources
 C:\Users\alex_\Desktop\AdvVBFinalProject3\AdvVBFinalProject3\obj\Debug\AdvVBFinalProject3.frmRetailProductList.resources
-C:\Users\alex_\Desktop\AdvVBFinalProject3\AdvVBFinalProject3\obj\Debug\AdvVBFinalProject3.frmUsernameCreation.resources
 C:\Users\alex_\Desktop\AdvVBFinalProject3\AdvVBFinalProject3\obj\Debug\AdvVBFinalProject3.frmViewAllProducts.resources
 C:\Users\alex_\Desktop\AdvVBFinalProject3\AdvVBFinalProject3\obj\Debug\AdvVBFinalProject3.frmWishList.resources
 C:\Users\alex_\Desktop\AdvVBFinalProject3\AdvVBFinalProject3\obj\Debug\AdvVBFinalProject3.vbproj.GenerateResource.Cache
@@ -17,4 +16,3 @@ C:\Users\alex_\Desktop\AdvVBFinalProject3\AdvVBFinalProject3\obj\Debug\AdvVBFina
 C:\Users\alex_\Desktop\AdvVBFinalProject3\AdvVBFinalProject3\obj\Debug\AdvVBFinalProject3.pdb
 C:\Users\alex_\Desktop\AdvVBFinalProject3\AdvVBFinalProject3\bin\Debug\CALSdatabase.mdf
 C:\Users\alex_\Desktop\AdvVBFinalProject3\AdvVBFinalProject3\bin\Debug\CALSdatabase_log.ldf
-C:\Users\alex_\Desktop\AdvVBFinalProject3\AdvVBFinalProject3\obj\Debug\AdvVBFinalProject3.LoginMain.resources

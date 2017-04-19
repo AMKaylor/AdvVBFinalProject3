@@ -2958,7 +2958,7 @@ Namespace CALSdatabaseDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(17) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(19) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT ProductId, Product_Name, Marine_Type, Experience, Season, Food_Diet, Retai"& _ 
@@ -2966,106 +2966,118 @@ Namespace CALSdatabaseDataSetTableAdapters
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "SELECT        ProductId, Product_Name, Marine_Type, Experience, Season, Food_Diet"& _ 
-                ", RetailerId, Retailer_Name, Price"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            ProductTable"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        ("& _ 
-                "Food_Diet LIKE 'c' + '%')"
+            Me._commandCollection(1).CommandText = "SELECT        Price"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            ProductTable"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (ProductId = @Pro"& _ 
+                "ductId)"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ProductId", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "ProductId", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(2).Connection = Me.Connection
             Me._commandCollection(2).CommandText = "SELECT        ProductId, Product_Name, Marine_Type, Experience, Season, Food_Diet"& _ 
                 ", RetailerId, Retailer_Name, Price"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            ProductTable"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        ("& _ 
-                "Food_Diet LIKE 'f' + '%')"
+                "Food_Diet LIKE 'c' + '%')"
             Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(3).Connection = Me.Connection
             Me._commandCollection(3).CommandText = "SELECT        ProductId, Product_Name, Marine_Type, Experience, Season, Food_Diet"& _ 
                 ", RetailerId, Retailer_Name, Price"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            ProductTable"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        ("& _ 
-                "Food_Diet LIKE 'h' + '%')"
+                "Food_Diet LIKE 'f' + '%')"
             Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(4) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(4).Connection = Me.Connection
             Me._commandCollection(4).CommandText = "SELECT        ProductId, Product_Name, Marine_Type, Experience, Season, Food_Diet"& _ 
                 ", RetailerId, Retailer_Name, Price"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            ProductTable"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        ("& _ 
-                "Food_Diet LIKE 'o' + '%')"
+                "Food_Diet LIKE 'h' + '%')"
             Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(5) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(5).Connection = Me.Connection
             Me._commandCollection(5).CommandText = "SELECT        ProductId, Product_Name, Marine_Type, Experience, Season, Food_Diet"& _ 
                 ", RetailerId, Retailer_Name, Price"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            ProductTable"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        ("& _ 
-                "Experience LIKE 'b' + '%')"
+                "Food_Diet LIKE 'o' + '%')"
             Me._commandCollection(5).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(6) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(6).Connection = Me.Connection
             Me._commandCollection(6).CommandText = "SELECT        ProductId, Product_Name, Marine_Type, Experience, Season, Food_Diet"& _ 
                 ", RetailerId, Retailer_Name, Price"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            ProductTable"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        ("& _ 
-                "Experience LIKE 'e' + '%')"
+                "Experience LIKE 'b' + '%')"
             Me._commandCollection(6).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(7) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(7).Connection = Me.Connection
             Me._commandCollection(7).CommandText = "SELECT        ProductId, Product_Name, Marine_Type, Experience, Season, Food_Diet"& _ 
                 ", RetailerId, Retailer_Name, Price"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            ProductTable"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        ("& _ 
-                "Experience LIKE 'i' + '%')"
+                "Experience LIKE 'e' + '%')"
             Me._commandCollection(7).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(8) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(8).Connection = Me.Connection
             Me._commandCollection(8).CommandText = "SELECT        ProductId, Product_Name, Marine_Type, Experience, Season, Food_Diet"& _ 
                 ", RetailerId, Retailer_Name, Price"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            ProductTable"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        ("& _ 
-                "Marine_Type LIKE 'f' + '%')"
+                "Experience LIKE 'i' + '%')"
             Me._commandCollection(8).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(9) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(9).Connection = Me.Connection
             Me._commandCollection(9).CommandText = "SELECT        ProductId, Product_Name, Marine_Type, Experience, Season, Food_Diet"& _ 
                 ", RetailerId, Retailer_Name, Price"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            ProductTable"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        ("& _ 
-                "Marine_Type LIKE 'h' + '%')"
+                "Marine_Type LIKE 'f' + '%')"
             Me._commandCollection(9).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(10) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(10).Connection = Me.Connection
             Me._commandCollection(10).CommandText = "SELECT        ProductId, Product_Name, Marine_Type, Experience, Season, Food_Diet"& _ 
                 ", RetailerId, Retailer_Name, Price"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            ProductTable"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        ("& _ 
-                "Marine_Type LIKE 's' + '%')"
+                "Marine_Type LIKE 'h' + '%')"
             Me._commandCollection(10).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(11) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(11).Connection = Me.Connection
             Me._commandCollection(11).CommandText = "SELECT        ProductId, Product_Name, Marine_Type, Experience, Season, Food_Diet"& _ 
                 ", RetailerId, Retailer_Name, Price"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            ProductTable"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        ("& _ 
-                "Season = 'fw')"
+                "Marine_Type LIKE 's' + '%')"
             Me._commandCollection(11).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(12) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(12).Connection = Me.Connection
-            Me._commandCollection(12).CommandText = "SELECT        ProductId, Product_Name, Marine_Type, Experience, Season, Food_Diet"& _ 
-                ", RetailerId, Retailer_Name, Price"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            ProductTable"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        ("& _ 
-                "Season = 'sp')"
+            Me._commandCollection(12).CommandText = "SELECT        ProductId, Product_Name, RetailerId, Retailer_Name, Price"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM    "& _ 
+                "        ProductTable"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (RetailerId = @RetailerId)"
             Me._commandCollection(12).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(12).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RetailerId", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "RetailerId", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(13) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(13).Connection = Me.Connection
             Me._commandCollection(13).CommandText = "SELECT        ProductId, Product_Name, Marine_Type, Experience, Season, Food_Diet"& _ 
                 ", RetailerId, Retailer_Name, Price"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            ProductTable"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        ("& _ 
-                "Season = 'ss')"
+                "Season = 'fw')"
             Me._commandCollection(13).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(14) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(14).Connection = Me.Connection
             Me._commandCollection(14).CommandText = "SELECT        ProductId, Product_Name, Marine_Type, Experience, Season, Food_Diet"& _ 
                 ", RetailerId, Retailer_Name, Price"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            ProductTable"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        ("& _ 
-                "Season = 'ssf')"
+                "Season = 'sp')"
             Me._commandCollection(14).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(15) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(15).Connection = Me.Connection
             Me._commandCollection(15).CommandText = "SELECT        ProductId, Product_Name, Marine_Type, Experience, Season, Food_Diet"& _ 
                 ", RetailerId, Retailer_Name, Price"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            ProductTable"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        ("& _ 
-                "Season = 'ssfw')"
+                "Season = 'ss')"
             Me._commandCollection(15).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(16) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(16).Connection = Me.Connection
             Me._commandCollection(16).CommandText = "SELECT        ProductId, Product_Name, Marine_Type, Experience, Season, Food_Diet"& _ 
                 ", RetailerId, Retailer_Name, Price"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            ProductTable"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        ("& _ 
-                "Season = 'su')"
+                "Season = 'ssf')"
             Me._commandCollection(16).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(17) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(17).Connection = Me.Connection
             Me._commandCollection(17).CommandText = "SELECT        ProductId, Product_Name, Marine_Type, Experience, Season, Food_Diet"& _ 
                 ", RetailerId, Retailer_Name, Price"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            ProductTable"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        ("& _ 
-                "Season = 'w')"
+                "Season = 'ssfw')"
             Me._commandCollection(17).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(18) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(18).Connection = Me.Connection
+            Me._commandCollection(18).CommandText = "SELECT        ProductId, Product_Name, Marine_Type, Experience, Season, Food_Diet"& _ 
+                ", RetailerId, Retailer_Name, Price"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            ProductTable"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        ("& _ 
+                "Season = 'su')"
+            Me._commandCollection(18).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(19) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(19).Connection = Me.Connection
+            Me._commandCollection(19).CommandText = "SELECT        ProductId, Product_Name, Marine_Type, Experience, Season, Food_Diet"& _ 
+                ", RetailerId, Retailer_Name, Price"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            ProductTable"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        ("& _ 
+                "Season = 'w')"
+            Me._commandCollection(19).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3096,8 +3108,9 @@ Namespace CALSdatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataByDietC() As CALSdatabaseDataSet.ProductTableDataTable
+        Public Overloads Overridable Function GetDataByComparedPrice(ByVal ProductId As Integer) As CALSdatabaseDataSet.ProductTableDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(ProductId,Integer)
             Dim dataTable As CALSdatabaseDataSet.ProductTableDataTable = New CALSdatabaseDataSet.ProductTableDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
@@ -3107,7 +3120,7 @@ Namespace CALSdatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataByDietF() As CALSdatabaseDataSet.ProductTableDataTable
+        Public Overloads Overridable Function GetDataByDietC() As CALSdatabaseDataSet.ProductTableDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(2)
             Dim dataTable As CALSdatabaseDataSet.ProductTableDataTable = New CALSdatabaseDataSet.ProductTableDataTable()
             Me.Adapter.Fill(dataTable)
@@ -3118,7 +3131,7 @@ Namespace CALSdatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataByDietH() As CALSdatabaseDataSet.ProductTableDataTable
+        Public Overloads Overridable Function GetDataByDietF() As CALSdatabaseDataSet.ProductTableDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(3)
             Dim dataTable As CALSdatabaseDataSet.ProductTableDataTable = New CALSdatabaseDataSet.ProductTableDataTable()
             Me.Adapter.Fill(dataTable)
@@ -3129,7 +3142,7 @@ Namespace CALSdatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataByDietO() As CALSdatabaseDataSet.ProductTableDataTable
+        Public Overloads Overridable Function GetDataByDietH() As CALSdatabaseDataSet.ProductTableDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(4)
             Dim dataTable As CALSdatabaseDataSet.ProductTableDataTable = New CALSdatabaseDataSet.ProductTableDataTable()
             Me.Adapter.Fill(dataTable)
@@ -3140,7 +3153,7 @@ Namespace CALSdatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataByExperienceB() As CALSdatabaseDataSet.ProductTableDataTable
+        Public Overloads Overridable Function GetDataByDietO() As CALSdatabaseDataSet.ProductTableDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(5)
             Dim dataTable As CALSdatabaseDataSet.ProductTableDataTable = New CALSdatabaseDataSet.ProductTableDataTable()
             Me.Adapter.Fill(dataTable)
@@ -3151,7 +3164,7 @@ Namespace CALSdatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataByExperienceE() As CALSdatabaseDataSet.ProductTableDataTable
+        Public Overloads Overridable Function GetDataByExperienceB() As CALSdatabaseDataSet.ProductTableDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(6)
             Dim dataTable As CALSdatabaseDataSet.ProductTableDataTable = New CALSdatabaseDataSet.ProductTableDataTable()
             Me.Adapter.Fill(dataTable)
@@ -3162,7 +3175,7 @@ Namespace CALSdatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataByExperienceI() As CALSdatabaseDataSet.ProductTableDataTable
+        Public Overloads Overridable Function GetDataByExperienceE() As CALSdatabaseDataSet.ProductTableDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(7)
             Dim dataTable As CALSdatabaseDataSet.ProductTableDataTable = New CALSdatabaseDataSet.ProductTableDataTable()
             Me.Adapter.Fill(dataTable)
@@ -3173,7 +3186,7 @@ Namespace CALSdatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataByMarineTypeF() As CALSdatabaseDataSet.ProductTableDataTable
+        Public Overloads Overridable Function GetDataByExperienceI() As CALSdatabaseDataSet.ProductTableDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(8)
             Dim dataTable As CALSdatabaseDataSet.ProductTableDataTable = New CALSdatabaseDataSet.ProductTableDataTable()
             Me.Adapter.Fill(dataTable)
@@ -3184,7 +3197,7 @@ Namespace CALSdatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataByMarineTypeH() As CALSdatabaseDataSet.ProductTableDataTable
+        Public Overloads Overridable Function GetDataByMarineTypeF() As CALSdatabaseDataSet.ProductTableDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(9)
             Dim dataTable As CALSdatabaseDataSet.ProductTableDataTable = New CALSdatabaseDataSet.ProductTableDataTable()
             Me.Adapter.Fill(dataTable)
@@ -3195,7 +3208,7 @@ Namespace CALSdatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataByMarineTypeS() As CALSdatabaseDataSet.ProductTableDataTable
+        Public Overloads Overridable Function GetDataByMarineTypeH() As CALSdatabaseDataSet.ProductTableDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(10)
             Dim dataTable As CALSdatabaseDataSet.ProductTableDataTable = New CALSdatabaseDataSet.ProductTableDataTable()
             Me.Adapter.Fill(dataTable)
@@ -3206,7 +3219,7 @@ Namespace CALSdatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataBySeasonFW() As CALSdatabaseDataSet.ProductTableDataTable
+        Public Overloads Overridable Function GetDataByMarineTypeS() As CALSdatabaseDataSet.ProductTableDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(11)
             Dim dataTable As CALSdatabaseDataSet.ProductTableDataTable = New CALSdatabaseDataSet.ProductTableDataTable()
             Me.Adapter.Fill(dataTable)
@@ -3217,8 +3230,9 @@ Namespace CALSdatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataBySeasonSP() As CALSdatabaseDataSet.ProductTableDataTable
+        Public Overloads Overridable Function GetDataByRetailerForComparison(ByVal RetailerId As Integer) As CALSdatabaseDataSet.ProductTableDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(12)
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(RetailerId,Integer)
             Dim dataTable As CALSdatabaseDataSet.ProductTableDataTable = New CALSdatabaseDataSet.ProductTableDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
@@ -3228,7 +3242,7 @@ Namespace CALSdatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataBySeasonSS() As CALSdatabaseDataSet.ProductTableDataTable
+        Public Overloads Overridable Function GetDataBySeasonFW() As CALSdatabaseDataSet.ProductTableDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(13)
             Dim dataTable As CALSdatabaseDataSet.ProductTableDataTable = New CALSdatabaseDataSet.ProductTableDataTable()
             Me.Adapter.Fill(dataTable)
@@ -3239,7 +3253,7 @@ Namespace CALSdatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataBySeasonSSF() As CALSdatabaseDataSet.ProductTableDataTable
+        Public Overloads Overridable Function GetDataBySeasonSP() As CALSdatabaseDataSet.ProductTableDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(14)
             Dim dataTable As CALSdatabaseDataSet.ProductTableDataTable = New CALSdatabaseDataSet.ProductTableDataTable()
             Me.Adapter.Fill(dataTable)
@@ -3250,7 +3264,7 @@ Namespace CALSdatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataBySeasonSSFW() As CALSdatabaseDataSet.ProductTableDataTable
+        Public Overloads Overridable Function GetDataBySeasonSS() As CALSdatabaseDataSet.ProductTableDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(15)
             Dim dataTable As CALSdatabaseDataSet.ProductTableDataTable = New CALSdatabaseDataSet.ProductTableDataTable()
             Me.Adapter.Fill(dataTable)
@@ -3261,7 +3275,7 @@ Namespace CALSdatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataBySeasonSU() As CALSdatabaseDataSet.ProductTableDataTable
+        Public Overloads Overridable Function GetDataBySeasonSSF() As CALSdatabaseDataSet.ProductTableDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(16)
             Dim dataTable As CALSdatabaseDataSet.ProductTableDataTable = New CALSdatabaseDataSet.ProductTableDataTable()
             Me.Adapter.Fill(dataTable)
@@ -3272,8 +3286,30 @@ Namespace CALSdatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataBySeasonW() As CALSdatabaseDataSet.ProductTableDataTable
+        Public Overloads Overridable Function GetDataBySeasonSSFW() As CALSdatabaseDataSet.ProductTableDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(17)
+            Dim dataTable As CALSdatabaseDataSet.ProductTableDataTable = New CALSdatabaseDataSet.ProductTableDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataBySeasonSU() As CALSdatabaseDataSet.ProductTableDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(18)
+            Dim dataTable As CALSdatabaseDataSet.ProductTableDataTable = New CALSdatabaseDataSet.ProductTableDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataBySeasonW() As CALSdatabaseDataSet.ProductTableDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(19)
             Dim dataTable As CALSdatabaseDataSet.ProductTableDataTable = New CALSdatabaseDataSet.ProductTableDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
