@@ -28,12 +28,13 @@ Partial Class frmRetailProductList
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RetailerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.cboRetailer = New System.Windows.Forms.ToolStripComboBox()
-        Me.AddToWishlistToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.dgvRetailer = New System.Windows.Forms.DataGridView()
         Me.ProductTableBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CALSdatabaseDataSet = New AdvVBFinalProject3.CALSdatabaseDataSet()
         Me.ProductTableTableAdapter = New AdvVBFinalProject3.CALSdatabaseDataSetTableAdapters.ProductTableTableAdapter()
+        Me.btnAdd = New System.Windows.Forms.Button()
+        Me.ProductId = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ProductNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MarineTypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ExperienceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -49,7 +50,7 @@ Partial Class frmRetailProductList
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExitToolStripMenuItem, Me.RetailerToolStripMenuItem, Me.cboRetailer, Me.AddToWishlistToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExitToolStripMenuItem, Me.RetailerToolStripMenuItem, Me.cboRetailer})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(778, 27)
@@ -72,12 +73,6 @@ Partial Class frmRetailProductList
         Me.cboRetailer.Name = "cboRetailer"
         Me.cboRetailer.Size = New System.Drawing.Size(121, 23)
         '
-        'AddToWishlistToolStripMenuItem
-        '
-        Me.AddToWishlistToolStripMenuItem.Name = "AddToWishlistToolStripMenuItem"
-        Me.AddToWishlistToolStripMenuItem.Size = New System.Drawing.Size(99, 23)
-        Me.AddToWishlistToolStripMenuItem.Text = "Add to Wishlist"
-        '
         'StatusStrip1
         '
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 397)
@@ -94,7 +89,7 @@ Partial Class frmRetailProductList
         Me.dgvRetailer.BackgroundColor = System.Drawing.SystemColors.ButtonFace
         Me.dgvRetailer.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvRetailer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvRetailer.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ProductNameDataGridViewTextBoxColumn, Me.MarineTypeDataGridViewTextBoxColumn, Me.ExperienceDataGridViewTextBoxColumn, Me.SeasonDataGridViewTextBoxColumn, Me.FoodDietDataGridViewTextBoxColumn, Me.RetailerNameDataGridViewTextBoxColumn, Me.PriceDataGridViewTextBoxColumn})
+        Me.dgvRetailer.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ProductId, Me.ProductNameDataGridViewTextBoxColumn, Me.MarineTypeDataGridViewTextBoxColumn, Me.ExperienceDataGridViewTextBoxColumn, Me.SeasonDataGridViewTextBoxColumn, Me.FoodDietDataGridViewTextBoxColumn, Me.RetailerNameDataGridViewTextBoxColumn, Me.PriceDataGridViewTextBoxColumn})
         Me.dgvRetailer.DataSource = Me.ProductTableBindingSource
         Me.dgvRetailer.Location = New System.Drawing.Point(12, 54)
         Me.dgvRetailer.Name = "dgvRetailer"
@@ -115,6 +110,23 @@ Partial Class frmRetailProductList
         'ProductTableTableAdapter
         '
         Me.ProductTableTableAdapter.ClearBeforeFill = True
+        '
+        'btnAdd
+        '
+        Me.btnAdd.Location = New System.Drawing.Point(244, 4)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(130, 23)
+        Me.btnAdd.TabIndex = 3
+        Me.btnAdd.Text = "Add To Wishlist"
+        Me.btnAdd.UseVisualStyleBackColor = True
+        '
+        'ProductId
+        '
+        Me.ProductId.DataPropertyName = "ProductId"
+        Me.ProductId.HeaderText = "ProductId"
+        Me.ProductId.Name = "ProductId"
+        Me.ProductId.ReadOnly = True
+        Me.ProductId.Visible = False
         '
         'ProductNameDataGridViewTextBoxColumn
         '
@@ -173,6 +185,7 @@ Partial Class frmRetailProductList
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(778, 419)
+        Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.dgvRetailer)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.MenuStrip1)
@@ -193,12 +206,13 @@ Partial Class frmRetailProductList
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents StatusStrip1 As StatusStrip
     Friend WithEvents dgvRetailer As DataGridView
-    Friend WithEvents AddToWishlistToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RetailerToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents cboRetailer As ToolStripComboBox
     Friend WithEvents CALSdatabaseDataSet As CALSdatabaseDataSet
     Friend WithEvents ProductTableBindingSource As BindingSource
     Friend WithEvents ProductTableTableAdapter As CALSdatabaseDataSetTableAdapters.ProductTableTableAdapter
+    Friend WithEvents btnAdd As Button
+    Friend WithEvents ProductId As DataGridViewTextBoxColumn
     Friend WithEvents ProductNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents MarineTypeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ExperienceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn

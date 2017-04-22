@@ -16,3 +16,4 @@ C:\Users\alex_\Desktop\AdvVBFinalProject3\AdvVBFinalProject3\obj\Debug\AdvVBFina
 C:\Users\alex_\Desktop\AdvVBFinalProject3\AdvVBFinalProject3\obj\Debug\AdvVBFinalProject3.pdb
 C:\Users\alex_\Desktop\AdvVBFinalProject3\AdvVBFinalProject3\bin\Debug\CALSdatabase.mdf
 C:\Users\alex_\Desktop\AdvVBFinalProject3\AdvVBFinalProject3\bin\Debug\CALSdatabase_log.ldf
+C:\Users\alex_\Desktop\AdvVBFinalProject3\AdvVBFinalProject3\obj\Debug\AdvVBFinalProject3.frmRetailerReport.resources

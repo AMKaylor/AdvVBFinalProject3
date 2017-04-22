@@ -29,13 +29,14 @@ Partial Class CALSmain
         Me.YourWishListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RetailerInformationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RetailerProductsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProductInfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewAllToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.PriceComparisonToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.StatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.lblStatus = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.RetailerProductsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RetailerReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -77,7 +78,7 @@ Partial Class CALSmain
         '
         'RetailerInformationToolStripMenuItem
         '
-        Me.RetailerInformationToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewAllToolStripMenuItem, Me.RetailerProductsToolStripMenuItem})
+        Me.RetailerInformationToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewAllToolStripMenuItem, Me.RetailerProductsToolStripMenuItem, Me.RetailerReportToolStripMenuItem})
         Me.RetailerInformationToolStripMenuItem.Name = "RetailerInformationToolStripMenuItem"
         Me.RetailerInformationToolStripMenuItem.Size = New System.Drawing.Size(82, 20)
         Me.RetailerInformationToolStripMenuItem.Text = "Retailer Info"
@@ -87,6 +88,12 @@ Partial Class CALSmain
         Me.ViewAllToolStripMenuItem.Name = "ViewAllToolStripMenuItem"
         Me.ViewAllToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
         Me.ViewAllToolStripMenuItem.Text = "View All"
+        '
+        'RetailerProductsToolStripMenuItem
+        '
+        Me.RetailerProductsToolStripMenuItem.Name = "RetailerProductsToolStripMenuItem"
+        Me.RetailerProductsToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
+        Me.RetailerProductsToolStripMenuItem.Text = "Retailer Products"
         '
         'ProductInfoToolStripMenuItem
         '
@@ -126,11 +133,11 @@ Partial Class CALSmain
         Me.lblStatus.Name = "lblStatus"
         Me.lblStatus.Size = New System.Drawing.Size(0, 17)
         '
-        'RetailerProductsToolStripMenuItem
+        'RetailerReportToolStripMenuItem
         '
-        Me.RetailerProductsToolStripMenuItem.Name = "RetailerProductsToolStripMenuItem"
-        Me.RetailerProductsToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
-        Me.RetailerProductsToolStripMenuItem.Text = "Retailer Products"
+        Me.RetailerReportToolStripMenuItem.Name = "RetailerReportToolStripMenuItem"
+        Me.RetailerReportToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
+        Me.RetailerReportToolStripMenuItem.Text = "Retailer Report"
         '
         'CALSmain
         '
@@ -165,4 +172,5 @@ Partial Class CALSmain
     Friend WithEvents PriceComparisonToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents lblStatus As ToolStripStatusLabel
     Friend WithEvents RetailerProductsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RetailerReportToolStripMenuItem As ToolStripMenuItem
 End Class

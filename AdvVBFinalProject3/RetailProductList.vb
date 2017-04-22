@@ -37,4 +37,24 @@ Public Class frmRetailProductList
         End If
 
     End Sub
+
+    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+
+        If dgvRetailer.SelectedRows.Count > 0 Then
+
+            Dim ProductId As Short = CShort(dgvRetailer.SelectedRows(0).Cells(0).Value)
+            Dim adapter As New CALSdatabaseDataSetTableAdapters.WishlistTableTableAdapter
+
+            If CBool(adapter.InsertQueryToWishlist(ProductId)) Then
+
+                MessageBox.Show("Product added to Wishlist.")
+
+            Else
+
+                MessageBox.Show("Unable to add Product.")
+
+            End If
+        End If
+
+    End Sub
 End Class
