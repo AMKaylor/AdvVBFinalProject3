@@ -47,6 +47,11 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:AdvVBFinalProject3.CALSdatabaseDataSet.PriceComparisonTableDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:AdvVBFinalProject3.CALSdatabaseDataSet.RetailerTableRow">
 <summary>
 Represents strongly named DataRow class.
@@ -63,6 +68,11 @@ Represents strongly named DataRow class.
 </summary>
 </member>
 <member name="T:AdvVBFinalProject3.CALSdatabaseDataSet.RetailerReportRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AdvVBFinalProject3.CALSdatabaseDataSet.PriceComparisonTableRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -87,6 +97,11 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
+<member name="T:AdvVBFinalProject3.CALSdatabaseDataSet.PriceComparisonTableRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 <member name="T:AdvVBFinalProject3.CALSdatabaseDataSetTableAdapters.RetailerTableTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
@@ -103,6 +118,11 @@ Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
 <member name="T:AdvVBFinalProject3.CALSdatabaseDataSetTableAdapters.RetailerReportTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AdvVBFinalProject3.CALSdatabaseDataSetTableAdapters.PriceComparisonTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

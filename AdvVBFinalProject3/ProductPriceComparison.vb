@@ -12,92 +12,69 @@ Public Class frmProductPriceComparison
     End Sub
 
     Private Sub frmProductPriceComparison_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'CALSdatabaseDataSet.ProductTable' table. You can move, or remove it, as needed.
+        Me.ProductTableTableAdapter.Fill(Me.CALSdatabaseDataSet.ProductTable)
 
-        'Load retailer names into combo boxes (1st box)
-        With cboRetailer1
-            .DataSource = mRetailer.Retailers
-            .DisplayMember = "Retailer_Name"
-            .ValueMember = "RetailerId"
-            .DropDownStyle = ComboBoxStyle.DropDownList
-            .SelectedIndex = -1
-        End With
 
-        'Load retailer names into combo boxes (2nd box)
-        With cboRetailer2
-            .DataSource = mRetailer.Retailers
-            .DisplayMember = "Retailer_Name"
-            .ValueMember = "RetailerId"
-            .DropDownStyle = ComboBoxStyle.DropDownList
-            .SelectedIndex = -1
-        End With
 
         formLoading = False
 
     End Sub
 
-    Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
+    Private Sub btnCompare_Click(sender As Object, e As EventArgs) Handles btnCompare.Click
+
+        Dim Price1 As Integer = CInt(lblPrice1.Text)
+        Dim Price2 As Integer = CInt(lblPrice2.Text)
+        Dim total As Integer
+
+        If Price1 > Price2 Then
+
+            total = Price1 - Price2
+            lblPriceDifference.Text = total.ToString("c")
+        Else
+
+            total = (-1 * (Price1 - Price2))
+            lblPriceDifference.Text = total.ToString("c")
+        End If
+
+
+    End Sub
+
+    Private Sub btnPrice1_Click(sender As Object, e As EventArgs) Handles btnPrice1.Click
+
+        Dim FirstValue As Boolean = True
+        Dim cell As DataGridViewCell
+        For Each cell In dgvPriceComparison.SelectedCells
+            If Not FirstValue Then
+                lblPrice1.Text = " "
+            End If
+            lblPrice1.Text = cell.Value.ToString()
+            FirstValue = False
+        Next
+
+
+    End Sub
+
+    Private Sub btnReset_Click_1(sender As Object, e As EventArgs) Handles btnReset.Click
         'House cleaning
 
         lblPriceDifference.Text = ""
-
-        cboRetailer1.SelectedIndex = -1
-        cboRetailer2.SelectedIndex = -1
-        cboComparedItem.SelectedIndex = -1
-        cboComparedItem.Enabled = False
-        cboComparedItem2.SelectedIndex = -1
-        cboComparedItem2.Enabled = False
+        lblPrice1.Text = ""
+        lblPrice2.Text = ""
 
     End Sub
 
-    Private Sub cboRetailer2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboRetailer2.SelectedIndexChanged
+    Private Sub btnPrice2_Click(sender As Object, e As EventArgs) Handles btnPrice2.Click
 
-        If cboRetailer2.SelectedIndex > -1 Then
-            cboComparedItem2.Enabled = True
-
-            With cboComparedItem2
-                .DataSource = mProducts.GetDataByRetailerForComparison(cboRetailer2.SelectedIndex)
-                .DisplayMember = "Product_Name"
-                .ValueMember = "ProductId"
-                .DropDownStyle = ComboBoxStyle.DropDownList
-                .SelectedIndex = -1
-            End With
-
-        Else
-            cboComparedItem2.Enabled = False
-        End If
-
-
-    End Sub
-
-    Private Sub cboRetailer1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboRetailer1.SelectedIndexChanged
-
-        If cboRetailer1.SelectedIndex > -1 Then
-            cboComparedItem.Enabled = True
-
-            With cboComparedItem
-                .DataSource = mProducts.GetDataByRetailerForComparison(cboRetailer1.SelectedIndex)
-                .DisplayMember = "Product_Name"
-                .ValueMember = "ProductId"
-                .DropDownStyle = ComboBoxStyle.DropDownList
-                .SelectedIndex = -1
-            End With
-
-        Else
-            cboComparedItem.Enabled = False
-        End If
-
-    End Sub
-
-    Private Sub btnCompare_Click(sender As Object, e As EventArgs) Handles btnCompare.Click
-
-        Dim total As Decimal
-        Dim compared1 As Decimal
-        Dim compared2 As Decimal
-
-        'compared1 = mProducts.GetDataByComparedPrice(cboComparedItem.SelectedIndex)
-        'compared2 = mProducts.GetDataByComparedPrice(cboComparedItem2.SelectedIndex)
-
-        total = compared1 - compared2
+        Dim FirstValue As Boolean = True
+        Dim cell As DataGridViewCell
+        For Each cell In dgvPriceComparison.SelectedCells
+            If Not FirstValue Then
+                lblPrice2.Text = " "
+            End If
+            lblPrice2.Text = cell.Value.ToString()
+            FirstValue = False
+        Next
 
 
     End Sub
