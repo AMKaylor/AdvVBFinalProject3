@@ -215,6 +215,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>CALSdatabase.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\CALS Logo2.Resized.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">

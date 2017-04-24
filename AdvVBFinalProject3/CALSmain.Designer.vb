@@ -30,15 +30,13 @@ Partial Class CALSmain
         Me.RetailerInformationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RetailerProductsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RetailerReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProductInfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewAllToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.PriceComparisonToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.StatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.lblStatus = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.RetailerReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.picCALSLogo = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1.SuspendLayout()
-        Me.StatusStrip1.SuspendLayout()
+        CType(Me.picCALSLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -46,7 +44,7 @@ Partial Class CALSmain
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.AccountInfoToolStripMenuItem, Me.RetailerInformationToolStripMenuItem, Me.ProductInfoToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(765, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(611, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -95,6 +93,12 @@ Partial Class CALSmain
         Me.RetailerProductsToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
         Me.RetailerProductsToolStripMenuItem.Text = "Retailer Products"
         '
+        'RetailerReportToolStripMenuItem
+        '
+        Me.RetailerReportToolStripMenuItem.Name = "RetailerReportToolStripMenuItem"
+        Me.RetailerReportToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
+        Me.RetailerReportToolStripMenuItem.Text = "Retailer Report"
+        '
         'ProductInfoToolStripMenuItem
         '
         Me.ProductInfoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewAllToolStripMenuItem1, Me.PriceComparisonToolStripMenuItem})
@@ -114,53 +118,35 @@ Partial Class CALSmain
         Me.PriceComparisonToolStripMenuItem.Size = New System.Drawing.Size(168, 22)
         Me.PriceComparisonToolStripMenuItem.Text = "Price Comparison"
         '
-        'StatusStrip1
+        'picCALSLogo
         '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StatusLabel, Me.lblStatus})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 415)
-        Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(765, 22)
-        Me.StatusStrip1.TabIndex = 1
-        Me.StatusStrip1.Text = "StatusStrip1"
-        '
-        'StatusLabel
-        '
-        Me.StatusLabel.Name = "StatusLabel"
-        Me.StatusLabel.Size = New System.Drawing.Size(0, 17)
-        '
-        'lblStatus
-        '
-        Me.lblStatus.Name = "lblStatus"
-        Me.lblStatus.Size = New System.Drawing.Size(0, 17)
-        '
-        'RetailerReportToolStripMenuItem
-        '
-        Me.RetailerReportToolStripMenuItem.Name = "RetailerReportToolStripMenuItem"
-        Me.RetailerReportToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
-        Me.RetailerReportToolStripMenuItem.Text = "Retailer Report"
+        Me.picCALSLogo.Image = Global.AdvVBFinalProject3.My.Resources.Resources.CALS_Logo2_Resized
+        Me.picCALSLogo.Location = New System.Drawing.Point(6, 29)
+        Me.picCALSLogo.Name = "picCALSLogo"
+        Me.picCALSLogo.Size = New System.Drawing.Size(600, 450)
+        Me.picCALSLogo.TabIndex = 2
+        Me.picCALSLogo.TabStop = False
         '
         'CALSmain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(765, 437)
-        Me.Controls.Add(Me.StatusStrip1)
+        Me.BackColor = System.Drawing.Color.LightGreen
+        Me.ClientSize = New System.Drawing.Size(611, 483)
+        Me.Controls.Add(Me.picCALSLogo)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "CALSmain"
         Me.Text = "Collector of Aquatic Life Supplier"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
-        Me.StatusStrip1.ResumeLayout(False)
-        Me.StatusStrip1.PerformLayout()
+        CType(Me.picCALSLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents StatusStrip1 As StatusStrip
-    Friend WithEvents StatusLabel As ToolStripStatusLabel
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RetailerInformationToolStripMenuItem As ToolStripMenuItem
@@ -170,7 +156,7 @@ Partial Class CALSmain
     Friend WithEvents ProductInfoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ViewAllToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents PriceComparisonToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents lblStatus As ToolStripStatusLabel
     Friend WithEvents RetailerProductsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RetailerReportToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents picCALSLogo As PictureBox
 End Class

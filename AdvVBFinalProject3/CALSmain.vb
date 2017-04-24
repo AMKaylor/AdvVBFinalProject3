@@ -33,4 +33,5 @@ Public Class CALSmain
     Private Sub RetailerReportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RetailerReportToolStripMenuItem.Click
         frmRetailerReport.ShowDialog()
     End Sub
+
 End Class

@@ -23,18 +23,26 @@ Public Class frmProductPriceComparison
 
     Private Sub btnCompare_Click(sender As Object, e As EventArgs) Handles btnCompare.Click
 
-        Dim Price1 As Integer = CInt(lblPrice1.Text)
-        Dim Price2 As Integer = CInt(lblPrice2.Text)
-        Dim total As Integer
+        If lblPrice1.Text = "" Then
+            MessageBox.Show("Please select a price for an item.")
 
-        If Price1 > Price2 Then
-
-            total = Price1 - Price2
-            lblPriceDifference.Text = total.ToString("c")
+        ElseIf lblPrice2.Text = "" Then
+            MessageBox.Show("Please select a price for an item.")
         Else
 
-            total = (-1 * (Price1 - Price2))
-            lblPriceDifference.Text = total.ToString("c")
+            Dim Price1 As Integer = CInt(lblPrice1.Text)
+            Dim Price2 As Integer = CInt(lblPrice2.Text)
+            Dim total As Integer
+
+            If Price1 > Price2 Then
+
+                total = Price1 - Price2
+                lblPriceDifference.Text = total.ToString("c")
+            Else
+
+                total = (-1 * (Price1 - Price2))
+                lblPriceDifference.Text = total.ToString("c")
+            End If
         End If
 
 
@@ -52,6 +60,13 @@ Public Class frmProductPriceComparison
             FirstValue = False
         Next
 
+        If lblPrice1.Text = lblPrice1.Text.ToString() Then
+            Try
+                Dim Price1 As Integer = CInt(lblPrice1.Text)
+            Catch ex As Exception
+                MessageBox.Show("Please select a price from the Price column.")
+            End Try
+        End If
 
     End Sub
 
@@ -76,6 +91,13 @@ Public Class frmProductPriceComparison
             FirstValue = False
         Next
 
+        If lblPrice2.Text = lblPrice2.Text.ToString() Then
+            Try
+                Dim Price2 As Integer = CInt(lblPrice2.Text)
+            Catch ex As Exception
+                MessageBox.Show("Please select a price from the Price column.")
+            End Try
+        End If
 
     End Sub
 End Class
